@@ -36109,6 +36109,10 @@ blocks.map = {
         var lastStation = _.last(stations);
 
         function getCorrectStationColor(stationId, defaultColor) {
+            if (stationId === "line4_7") {
+                return "#1EBCEF"
+            }
+
             var routeSymbol = $('.map__library symbol[id="' + stationId + '"]');
 
             if (!routeSymbol.length) return defaultColor;

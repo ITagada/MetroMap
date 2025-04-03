@@ -157,7 +157,7 @@
 
 
 const stations = [
-    { id: 'line1_1', names: ["Бульвар Рокоссовского", "Bulvar Rokossovskogo", "罗科索夫斯基布儿瓦尔", "Рокоссовский бульвары"] },
+    { id: 'Бульвар Рокоссовского', names: ["Бульвар Рокоссовского", "Bulvar Rokossovskogo", "罗科索夫斯基布儿瓦尔", "Рокоссовский бульвары"] },
     { id: 'line1_2', names: ["Черкизовская", "Cherkizovskaya", "切尔基佐夫斯卡娅", "Черкизовская"] },
     { id: 'line1_3', names: ["Преображенская площадь", "Preobrazhenskaya Ploschad", "普列欧勃拉任斯卡亚普洛夏基", "Преображенская алаңы"] },
     { id: 'line1_4', names: ["Сокольники", "Sokolniki", "索科利尼基", "Сокольники"] },
@@ -901,8 +901,8 @@ function Rar(routeData) {
     pip.classList.add('new_class');
     // console.log('Класс добавлен: new_class');
     // Показываем контейнер для рисования
-    document.getElementById("div_open").style.display = "inline-block";
-    document.getElementById("pip").style.display = "inline-block";
+    document.getElementById("div_open").style.display = "block";
+    document.getElementById("pip").style.display = "block";
 
     document.getElementById('pip'). innerHTML = '';
 
@@ -919,7 +919,7 @@ function Rar(routeData) {
 
     const startX = 100;
     const startY = 200;
-    const totalWidth = document.getElementById('pip').offsetWidth - 250;
+    const totalWidth = document.getElementById('pip').offsetWidth - 200;
 
     const stations = routeData.filter(item => item.type === 'station');
     const lines = routeData.filter(item => item.type === 'line');
@@ -3034,8 +3034,8 @@ function toggleMenu() {
     document.getElementById("pip").style.display = "none";
     var menu = document.getElementById('menu');
     if (menu.style.display === 'none' || menu.style.display === '') {
-        document.getElementById("div_open").style.display = "inline-block";
-        document.getElementById("menu").style.display = "inline-block";
+        document.getElementById("div_open").style.display = "block";
+        document.getElementById("menu").style.display = "block";
     } else {
         menu.style.display = 'none';
         document.getElementById("div_open").style.display = "none";
@@ -3119,7 +3119,7 @@ document.getElementById('departureBtn').addEventListener('click', function() {
 {
     activeButton = 'departure';
     searchString = '';
-    document.getElementById('div_open').style.display = 'inline-block';
+    document.getElementById('div_open').style.display = 'block';
     document.getElementById('keyboard').style.display = 'inline-block';
     document.getElementById('Name_station').style.display = 'inline-block';
     document.getElementById('menu').style.display = 'none';
@@ -3136,7 +3136,7 @@ else{
 document.getElementById('arrivalBtn').addEventListener('click', function() {
     activeButton = 'arrival';
     searchString = ''; // Очищаем строку поиска
-    document.getElementById('div_open').style.display = 'inline-block';
+    document.getElementById('div_open').style.display = 'block';
     document.getElementById('keyboard').style.display = 'inline-block';
     document.getElementById('Name_station').style.display = 'inline-block';
     document.getElementById('menu').style.display = 'none';
@@ -3156,7 +3156,7 @@ function updateStationList(filter) {
         line.stations.forEach(station => {
 
             if (station.toLowerCase().startsWith(filter.toLowerCase())) {
-                console.log(station.toLowerCase())
+                // console.log(station.toLowerCase())
                 const stationElem = document.createElement('li');
                 stationElem.className = 'station-item';
                 stationElem.textContent = station;
