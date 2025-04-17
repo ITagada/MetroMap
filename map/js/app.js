@@ -35463,6 +35463,10 @@ blocks.callout = {
         }
         if (!station.close) {
             $(this.cls.callout).show()
+
+            if (typeof translateCalloutText === 'function') {
+                translateCalloutText();
+            }
         }
     },
 }
@@ -35761,7 +35765,10 @@ blocks.fromto = {
         var line = StationHelper.getLineByStationId(id);
     
         document.getElementById("departureImage").style.backgroundColor = "#" + line.color;
-        document.getElementById("departureBtn").textContent = station.name;
+        // document.getElementById("departureBtn").textContent = translateText(station.name);
+        const departureBtn = document.getElementById("departureBtn");
+        departureBtn.textContent = translateText(station.name);
+        departureBtn.dataset.originalName = station.name;
         var contentElements = document.querySelectorAll(".content_text_station");
         contentElements[0].style.color = "#000000";
     
@@ -35805,7 +35812,10 @@ blocks.fromto = {
         var line = StationHelper.getLineByStationId(id);
     
         document.getElementById("arrivalImage").style.backgroundColor = "#" + line.color;
-        document.getElementById("arrivalBtn").textContent = station.name;
+        // document.getElementById("arrivalBtn").textContent = translateText(station.name);
+        const arrivalBtn = document.getElementById("arrivalBtn");
+        arrivalBtn.textContent = translateText(station.name);
+        arrivalBtn.dataset.originalName = station.name;
         var contentElements = document.querySelectorAll(".content_text_station");
         contentElements[1].style.color = "#000000";
     
@@ -36318,7 +36328,8 @@ blocks.map = {
         if (stationsCount !== linesCount + 1) {
             console.warn(`Ошибка! Станций (${stationsCount}) не на 1 больше, чем линий (${linesCount}).`);
         }
-        console.log('Массив данных о маршруте:', routeData);
+        console.log('Массив данных о маршруте: ')
+        console.table(routeData);
         window.routeData = routeData;
         return routeData;
     },
