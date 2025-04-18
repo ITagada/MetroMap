@@ -625,6 +625,16 @@ const stations = {
         'Сюда': ["Сюда", "Here", "這裡", "Мұнда"],
     };
 
+function getOriginalText(translatedText) {
+    for (const key in stations) {
+        const translations = stations[key];
+        if (translations.includes(translatedText)) {
+            return key;
+        }
+    }
+    return translatedText;
+}
+
 function translateText(originalText) {
     const translation = stations[originalText];
     if (translation) {
@@ -925,16 +935,18 @@ function Rar(routeData) {
 
         // Создаем элемент текста
         const textElement = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        const lineHeight = 20;
+        const baseY = cy - 40 - ((finalLines.length - 1) * lineHeight);
         textElement.setAttribute('x', cx);
-        textElement.setAttribute('y', cy - 40); // Позиция по Y не меняется
+        textElement.setAttribute('y', baseY); // Позиция по Y не меняется
         textElement.setAttribute('class', 'text_svg_station');
         textElement.setAttribute('text-anchor', 'middle');
         textElement.setAttribute('dominant-baseline', 'middle');
 
-        finalLines.forEach((line, index) => {
+        finalLines.forEach((line, i) => {
             const tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
             tspan.setAttribute('x', cx);
-            tspan.setAttribute('dy', index === 0 ? "-0.6em" : "1.2em");
+            tspan.setAttribute('y', baseY + i * lineHeight);
             tspan.textContent = line;
             textElement.appendChild(tspan);
         });
@@ -1848,13 +1860,14 @@ function updateStationList(filter) {
     metro.forEach(line => {
         line.stations.forEach(station => {
 
-            if (station.toLowerCase().startsWith(filter.toLowerCase())) {
+            const translated = translateText(station);
+            if (translated.toLowerCase().startsWith(filter.toLowerCase())) {
                 // console.log(station.toLowerCase())
                 const stationElem = document.createElement('li');
                 stationElem.className = 'station-item';
                 stationElem.textContent = translateText(station);
                 stationElem.onclick = function() {
-                    handleStationClick(station);
+                    handleStationClick(translated);
                 };
                 nameStationDiv.appendChild(stationElem);
             }
@@ -1862,34 +1875,66 @@ function updateStationList(filter) {
     });
 }
 
-function handleStationClick(stationName) {
+function handleStationClick(station) {
     document.getElementById("keyboard").style.display = "inline-block";
     document.getElementById("Name_station").style.display = "inline-block";
     document.getElementById("menu").style.display = "none";
 
+    let h = document.querySelectorAll("svg>g");
     const departureBtn = document.getElementById('departureBtn');
     const arrivalBtn = document.getElementById('arrivalBtn');
 
-    // Получаем объект станции по имени
-    const station = StationHelper.getStationByName(stationName);
-    if (!station) {
-        console.error("Станция не найдена:", stationName);
-        return;
-    }
+    const originalName = getOriginalText(station);  // 🆕 получаем оригинальное имя
 
-    // Устанавливаем перевод и оригинальное имя
     if (activeButton === 'departure') {
-        departureBtn.textContent = translateText(station.name);
-        departureBtn.dataset.originalName = station.name;
-        blocks.fromto.setFrom(station.id);
+        departureBtn.textContent = translateText(originalName); // 🆕 показываем перевод
+        departureBtn.dataset.originalName = originalName;       // 🆕 сохраняем оригинал
+
+        for (let i = 0; i < h.length; i++) {
+            let textElem = h[i].querySelector("text");
+            if (!textElem) continue;
+
+            let translatedName = textElem.textContent.trim();
+            let originalStationName = getOriginalText(translatedName);
+
+            let Button_name = originalName.toUpperCase().replace(/\s+/g, '');
+            let station_name = originalStationName.toUpperCase().replace(/\s+/g, '');
+
+            if (Button_name === station_name) {
+                let id = h[i].id;
+                console.log('Departure:', id);
+                if (id) {
+                    blocks.fromto.setFrom(id);
+                }
+            }
+        }
     } else if (activeButton === 'arrival') {
-        arrivalBtn.textContent = translateText(station.name);
-        arrivalBtn.dataset.originalName = station.name;
-        blocks.fromto.setTo(station.id);
+        arrivalBtn.textContent = translateText(originalName);
+        arrivalBtn.dataset.originalName = originalName;
+
+        for (let i = 0; i < h.length; i++) {
+            let textElem = h[i].querySelector("text");
+            if (!textElem) continue;
+
+            let translatedName = textElem.textContent.trim();
+            let originalStationName = getOriginalText(translatedName);
+
+            let Button_name = originalName.toUpperCase().replace(/\s+/g, '');
+            let station_name = originalStationName.toUpperCase().replace(/\s+/g, '');
+
+            if (Button_name === station_name) {
+                let id = h[i].id;
+                console.log('Arrival:', id);
+                if (id) {
+                    blocks.fromto.setTo(id);
+                }
+            }
+        }
     }
 
     document.getElementById('div_open').style.display = 'none';
 }
+
 
 
 document.querySelectorAll('.key').forEach(key => {
