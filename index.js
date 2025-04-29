@@ -18,14 +18,16 @@ mainapp.get('/', (req, res) => {
 	  <body>
 		<script>
 		  alert('Перенаправление в приложение...');
-		  window.location.href = '/map'; // Перенаправление на другую страницу
+		  setTimeout(() => {
+			window.location.href = '/map';
+		  }, 100);
 		</script>
 	  </body>
 	  </html>
 	`);
   });
 
-mainapp.listen(port, function(err) 
+mainapp.listen(port, '0.0.0.0', function(err)
 {
 	if(err) {
 		throw err;

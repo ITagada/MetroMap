@@ -5,41 +5,35 @@
     border: 1px solid #000;
 }
 
-/* Основные стили для правой части */
-.right-buttons {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-left: 1200px;
-}
+
 #language{
     width: 100px;
     border: none;
     -webkit-box-shadow: 1px 2px 17px 0px rgba(34, 60, 80, 0.2);
--moz-box-shadow: 1px 2px 17px 0px rgba(34, 60, 80, 0.2);
-box-shadow: 1px 2px 17px 0px rgba(34, 60, 80, 0.2);
-font-size: 24px;
-text-transform: uppercase;
-font-weight: 900;
-color: #00aaff;
+    -moz-box-shadow: 1px 2px 17px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 1px 2px 17px 0px rgba(34, 60, 80, 0.2);
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #00aaff;
 }
 #line12-1{
     font-size: 12px;
 }
-text{
-    font-size: 14px;
-}
+/*text{*/
+/*    font-size: 14px;*/
+/*}*/
 #languageSelector{
     background-color: white;
     border: none;
-    width: 100px;
-    height: 50px;
+    width: 50%;
+    height: 80%;
     color: #00aaff;
-    font-size: 24px;
+    font-size: clamp(24px, 2vh, 50px);
 }
 #language option{
     text-transform: uppercase;
-font-weight: 900;
+    font-weight: 900;
     text-align: center;
     height: 40px;
     font-size: 24px;
@@ -64,71 +58,55 @@ font-weight: 900;
     -webkit-box-shadow: 0px -7px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px -7px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 0px -7px 8px 0px rgba(34, 60, 80, 0.2);
-    height: 300px;
+    left: 0;
+    right: 0;
+    height: 25vh;
     position: fixed;
-    bottom: 70px; /* Чуть выше основного fixedDiv */
-    width: 98vw;
-    max-width: 98vw;
+    bottom: 50px; /* Чуть выше основного fixedDiv */
+    width: 99vw;
+    max-width: 99vw;
     overflow-x: hidden;
     background-color: #f9f9f9;
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh;
     display: none; /* Изначально скрыт */
 }
 
 .Going {
-    width: 100%; /* Занимает всю доступную ширину */
+    height: 100%;
+    width: 100%;
     white-space: nowrap; /* Предотвращает перенос элементов внутри контейнера */
 }
 
 #pip {
-    display: flex; /* Позволяет содержимому быть прокручиваемым по горизонтали */
-    overflow-x: auto;
+    height: 100%;
     width: 100%;
-    min-width: 200px;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 /* Стили для SVG контейнера */
 .svg_pion {
-    display: flex;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
 }
 
-  /* Стили для кругов */
-  .circle_svg {
-    z-index: 999;
-    stroke-width: 3; /* Толщина обводки круга */
-  }
-
-  /* Стили для линий */
-  .line_svg {
-    z-index: 7;
-    stroke-width: 10; /* Толщина линии */
-  }
-
-  .text_line {
-    display: flex; /* Горизонтальное размещение */
-    gap: 10px; /* Пробел между станциями */
-    padding: 10px;
-  }
-
-  .list-text-routs {
-    font-size: 18px;
+.list-text-routs {
     background-color: lightgray;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
-  }
+}
 
 
 
   /* Стили для текста */
-  .text_svg_station {
+.text_svg_station {
     font-family: Arial, sans-serif;
-    font-size: 1.2rem;
-    z-index: 99999999;
     transform-box: fill-box; /* Применяет трансформацию к области текста */
     transform-origin: center;
-  }
+}
 
 
 /* Стиль для иконки гамбургера */
@@ -168,36 +146,41 @@ font-weight: 900;
 }
 #departureBtn{
     border: none;
-    margin-top: 20px;
     background-color: white;
-    font-size: 20px;
+    font-size: clamp(20px, 2vh, 40px);
 }
 #arrivalBtn{
     border: none;
-    margin-top: 20px;
     background-color: white;
-    font-size: 20px;
+    font-size: clamp(20px, 2vh, 40px);
 }
 #clear_routs{
     border: none;
-    margin-top: 20px;
     background-color: white;
-    font-size: 16px;
-    margin-left: 20px;
+    font-size: clamp(15px, 1.5vh, 30px);
+    margin-left: 1vw;
     color: #a0aaaf;
 }
 #fixedDiv {
-    position: relative;
-    z-index: 99999;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 99%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: white;
+    flex-wrap: nowrap;
+    padding: 0.5vw 1vw;
     -webkit-box-shadow: 0px -8px 8px 0px rgba(34, 60, 80, 0.2);
--moz-box-shadow: 0px -8px 8px 0px rgba(34, 60, 80, 0.2);
-box-shadow: 0px -8px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px -8px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px -8px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.left-buttons,
+.right-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-shrink: 1;
 }
 #stationList {
     display: none;
@@ -332,9 +315,8 @@ box-shadow: 0px -8px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .hamburger {
-    font-size: 24px;
+    font-size: clamp(24px, 2vh, 50px);
     cursor: pointer;
-    padding: 10px;
 }
 
 

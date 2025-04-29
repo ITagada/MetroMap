@@ -29239,7 +29239,7 @@ var metroLines  = [
             { stations: ['Кучино', 'Ольгино'], time: 3 },
             { stations: ['Ольгино', 'Железнодорожная'], time: 5 }
         ]
-}
+    }
 ];
 var metroLinesWithIds = [
     {
