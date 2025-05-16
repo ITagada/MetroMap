@@ -15493,7 +15493,7 @@ this['Metro']['templates']['schemewidget'] = Handlebars.template({
      */
     function getSupportedEvents() {
         var touchEnabled = 'ontouchstart' in window
-    console.log('Проверка работает или нет 2',touchEnabled);
+    // console.log('Проверка работает или нет 2',touchEnabled);
         if (touchEnabled) {
             return ['touchstart', 'touchmove', 'touchend', 'touchcancel']
         }
@@ -35877,7 +35877,7 @@ blocks.fromto = {
 
   runSearchSarmat: function () {
 
-	console.log(myGlobalArrayFromTo[0]);
+	// console.log(myGlobalArrayFromTo[0]);
 
 
 	if (myGlobalArrayFromTo.length === 2 && myGlobalArrayFromTo[0] !== undefined && myGlobalArrayFromTo[0] !== "" && myGlobalArrayFromTo[0] !== null) {
@@ -36548,7 +36548,7 @@ function getSupportedEvents() {
  */
 function getSupportedEvents() {
     var touchEnabled = 'ontouchstart' in window
-    console.log('Проверка работает или нет',touchEnabled);
+    // console.log('Проверка работает или нет',touchEnabled);
     if (touchEnabled) {
        // return ['touchstart', 'touchmove', 'touchend', 'touchcancel']
     }

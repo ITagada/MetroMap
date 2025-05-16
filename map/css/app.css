@@ -81,7 +81,6 @@
 
 #pip {
     height: 100%;
-    width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
 }
@@ -147,17 +146,17 @@
 #departureBtn{
     border: none;
     background-color: white;
-    font-size: clamp(20px, 2vh, 40px);
+    font-size: clamp(10px, 1vh, 20px);
 }
 #arrivalBtn{
     border: none;
     background-color: white;
-    font-size: clamp(20px, 2vh, 40px);
+    font-size: clamp(10px, 1vh, 20px);
 }
 #clear_routs{
     border: none;
     background-color: white;
-    font-size: clamp(15px, 1.5vh, 30px);
+    font-size: clamp(10px, 1vh, 20px);
     margin-left: 1vw;
     color: #a0aaaf;
 }

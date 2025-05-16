@@ -127,7 +127,7 @@
 				<rect id="line1-15" x="986" y="2066" fill="#000000" fill-opacity="0" width="150" height="50"/>
             </symbol>
 
-			
+
             <symbol id="line1_14-15">
 				<path id="line1_14-line1_15" fill="#D51317" d="M1051.72,2033.84l-41.9399,41.7999l4.95,4.9502l41.97-41.8301c-0.0499,0-0.11,0-0.1599,0c-2.66,0-4.8201-2.16-4.8201-4.8201C1051.72,2033.91,1051.72,2033.87,1051.72,2033.84z"/>
 				<circle id="line1_14" fill="#D51317" fill-opacity="0.01" stroke="#D51317" stroke-width="2" cx="1056" cy="2034" r="5"/>
@@ -1577,7 +1577,7 @@
 						<stop  offset="0" style="stop-color:#D6191D"/>
 						<stop  offset="1" style="stop-color:#AEACAD"/>
 					</linearGradient>
-					
+
 						<circle id="line9_4" fill="#ADABAC" fill-opacity="0.01" stroke="url(#line9_4_00000111911689424885125960000017604327314831310743_)" stroke-width="7" cx="1453" cy="858.34" r="12"/>
             </symbol>
             <symbol id="line9_5" viewBox="0 0 2850 3449">
@@ -1594,13 +1594,13 @@
 						<stop  offset="0" style="stop-color:#D6191D"/>
 						<stop  offset="1" style="stop-color:#AEACAD"/>
 					</linearGradient>
-					
+
 						<circle id="line9_4" fill="#ADABAC" fill-opacity="0.01" stroke="url(#line9_4_00000111911689424885125960000017604327314831310743_)" stroke-width="7" cx="1453" cy="858.34" r="12"/>
                 <linearGradient id="line9_5_00000023244575898246784930000007389937483413848478_" gradientUnits="userSpaceOnUse" x1="1380.36" y1="-1665.3921" x2="1380.36" y2="-1641.3921" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#B5CC06"/>
 						<stop  offset="1" style="stop-color:#AEACAD"/>
 					</linearGradient>
-					
+
 						<circle id="line9_5" fill="#ADABAC" fill-opacity="0.01" stroke="url(#line9_5_00000023244575898246784930000007389937483413848478_)" stroke-width="7" cx="1380.36" cy="954.718" r="12"/>
             </symbol>
             <symbol id="line9_6" viewBox="0 0 2850 3449">
@@ -1614,13 +1614,13 @@
 						<stop  offset="0" style="stop-color:#B5CC06"/>
 						<stop  offset="1" style="stop-color:#AEACAD"/>
 					</linearGradient>
-					
+
 						<circle id="line9_5" fill="#ADABAC" fill-opacity="0.01" stroke="url(#line9_5_00000023244575898246784930000007389937483413848478_)" stroke-width="7" cx="1380.36" cy="954.718" r="12"/>
                 <linearGradient id="line9_6_00000138539426677699123040000002459737616913649831_" gradientUnits="userSpaceOnUse" x1="1292.61" y1="-1577.78" x2="1292.61" y2="-1553.78" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#F7A702"/>
 						<stop  offset="1" style="stop-color:#AEACAD"/>
 					</linearGradient>
-					
+
 						<circle id="line9_6" fill="#ADABAC" fill-opacity="0.01" stroke="url(#line9_6_00000138539426677699123040000002459737616913649831_)" stroke-width="7" cx="1292.61" cy="1042.33" r="12"/>
             </symbol>
             <symbol id="line9_7" viewBox="0 0 2850 3449">
@@ -1634,7 +1634,7 @@
 						<stop  offset="0" style="stop-color:#F7A702"/>
 						<stop  offset="1" style="stop-color:#AEACAD"/>
 					</linearGradient>
-					
+
 						<circle id="line9_6" fill="#ADABAC" fill-opacity="0.01" stroke="url(#line9_6_00000138539426677699123040000002459737616913649831_)" stroke-width="7" cx="1292.61" cy="1042.33" r="12"/>
                 <circle id="line9_7" fill="#ADABAC" fill-opacity="0.01" stroke="#ADABAC" stroke-width="5.6" cx="1231.9301" cy="1102.5" r="7.7"/>
             </symbol>
@@ -1652,7 +1652,7 @@
 						<stop  offset="0.5052" style="stop-color:#89CDCF"/>
 						<stop  offset="1" style="stop-color:#47B485"/>
 					</linearGradient>
-					
+
 						<circle id="line9_8" fill="#ADABAC" fill-opacity="0.01" stroke="url(#line9_8_00000049198099257931428480000012611877312215426486_)" stroke-width="7" cx="1192" cy="1216" r="16"/>
             </symbol>
             <symbol id="line9_9" viewBox="0 0 2850 3449">
@@ -1668,7 +1668,7 @@
 						<stop  offset="0.5052" style="stop-color:#89CDCF"/>
 						<stop  offset="1" style="stop-color:#47B485"/>
 					</linearGradient>
-					
+
 						<circle id="line9_8" fill="#ADABAC" fill-opacity="0.01" stroke="url(#line9_8_00000049198099257931428480000012611877312215426486_)" stroke-width="7" cx="1192" cy="1216" r="16"/>
                 <circle id="line9_9" fill="#ADABAC" fill-opacity="0.01" stroke="#ADABAC" stroke-width="5.6" cx="1257.9301" cy="1330.5" r="7.7"/>
             </symbol>
@@ -1854,7 +1854,7 @@
 						<stop  offset="0" style="stop-color:#B5CC06"/>
 						<stop  offset="1" style="stop-color:#F7A702"/>
 					</linearGradient>
-					
+
 						<circle id="line10_2" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line10_2_00000131327468389959711310000007867316830049124280_)" stroke-width="7" cx="1292.61" cy="632.13" r="12"/>
             </symbol>
             <symbol id="line10_3" viewBox="0 0 2850 3449">
@@ -1867,7 +1867,7 @@
 						<stop  offset="0" style="stop-color:#B5CC06"/>
 						<stop  offset="1" style="stop-color:#F7A702"/>
 					</linearGradient>
-					
+
 						<circle id="line10_2" fill="#B4CC04" fill-opacity="0.01" stroke="url(#line10_2_00000131327468389959711310000007867316830049124280_)" stroke-width="7" cx="1292.61" cy="632.13" r="12"/>
                 <circle id="line10_3" fill="#B4CC04" fill-opacity="0.01" stroke="#B4CC04" stroke-width="2" cx="1271.27" cy="692.235" r="5"/>
             </symbol>
@@ -1903,7 +1903,7 @@
 						<stop  offset="0.5052" style="stop-color:#B5CC06"/>
 						<stop  offset="1" style="stop-color:#D6191D"/>
 					</linearGradient>
-					
+
 						<circle id="line10_6" fill="#B4CC04" fill-opacity="0.01" stroke="url(#line10_6_00000030466535489567665610000006916960458894074042_)" stroke-width="7" cx="1292.6" cy="867.1" r="16"/>
             </symbol>
             <symbol id="line10_7" viewBox="0 0 2850 3449">
@@ -1918,13 +1918,13 @@
 						<stop  offset="0.5052" style="stop-color:#B5CC06"/>
 						<stop  offset="1" style="stop-color:#D6191D"/>
 					</linearGradient>
-					
+
 						<circle id="line10_6" fill="#B4CC04" fill-opacity="0.01" stroke="url(#line10_6_00000030466535489567665610000006916960458894074042_)" stroke-width="7" cx="1292.6" cy="867.1" r="16"/>
                 <linearGradient id="line10_7_00000116232574165324658370000006242747623690522804_" gradientUnits="userSpaceOnUse" x1="1380.36" y1="-1665.3921" x2="1380.36" y2="-1641.3921" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#B5CC06"/>
 						<stop  offset="1" style="stop-color:#AEACAD"/>
 					</linearGradient>
-					
+
 						<circle id="line10_7" fill="#B4CC04" fill-opacity="0.01" stroke="url(#line10_7_00000116232574165324658370000006242747623690522804_)" stroke-width="7" cx="1380.36" cy="954.718" r="12"/>
             </symbol>
             <symbol id="line10_8" viewBox="0 0 2850 3449">
@@ -1939,7 +1939,7 @@
 						<stop  offset="0" style="stop-color:#B5CC06"/>
 						<stop  offset="1" style="stop-color:#AEACAD"/>
 					</linearGradient>
-					
+
 						<circle id="line10_7" fill="#B4CC04" fill-opacity="0.01" stroke="url(#line10_7_00000116232574165324658370000006242747623690522804_)" stroke-width="7" cx="1380.36" cy="954.718" r="12"/>
                 <circle id="line10_8" fill="#B4CC04" fill-opacity="0.01" stroke="#B4CC04" stroke-width="2" cx="1418.1" cy="1024.03" r="5"/>
             </symbol>
@@ -2266,7 +2266,7 @@
 						<stop  offset="0" style="stop-color:#88CDCF"/>
 						<stop  offset="1" style="stop-color:#FFDD02"/>
 					</linearGradient>
-					
+
 						<circle id="line11_13" fill="#88CDCF" fill-opacity="0.01" stroke="url(#line11_13_00000168091713121460923820000004294615621538810045_)" stroke-width="7" cx="738" cy="2259.0901" r="12"/>
             </symbol>
             <symbol id="line11_14" viewBox="0 0 2850 3449">
@@ -3324,7 +3324,7 @@
 						<stop  offset="0" style="stop-color:#D6171B"/>
 						<stop  offset="1" style="stop-color:#AEACAD"/>
 					</linearGradient>
-					
+
 						<circle id="line14_28" fill="#D6171B" fill-opacity="0.01" stroke="url(#line14_28_00000135670444311272479510000002698005402778702010_)" stroke-width="7" cx="1453" cy="858.34" r="12"/>
             </symbol>
             <symbol id="line14_29" viewBox="0 0 2850 3449">
@@ -3352,7 +3352,7 @@
 						<stop  offset="0" style="stop-color:#D6171B"/>
 						<stop  offset="1" style="stop-color:#AEACAD"/>
 					</linearGradient>
-					
+
 						<circle id="line14_28" fill="#D6171B" fill-opacity="0.01" stroke="url(#line14_28_00000135670444311272479510000002698005402778702010_)" stroke-width="7" cx="1453" cy="858.34" r="12"/>
                 <path id="line14_29" fill-rule="evenodd" clip-rule="evenodd" fill="#D6171B" d="M1613.28,882.223c0-5.854,4.74-10.6,10.6-10.6
 					c5.85,0,10.6,4.746,10.6,10.6s-4.75,10.6-10.6,10.6C1618.02,892.823,1613.28,888.077,1613.28,882.223z M1623.88,873.823
@@ -3512,15 +3512,15 @@
                 <circle id="line15_7" fill="#EE7BAE" fill-opacity="0.01" stroke="#EE7BAE" stroke-width="2" cx="2332" cy="2620.97" r="5"/>
 				<circle id="line15_8" fill="#EE7BAE" fill-opacity="0.01" stroke="#EE7BAE" stroke-width="2" cx="2332" cy="2670.1799" r="5"/>
             </symbol>
-            
+
             <!-- Троицкая линия-->
-            
+
                 <symbol id="line16_1" viewBox="0 0 2850 3449">
                 <text transform="translate(1065.47 2493.19)" fill="#000000" font-family="'MoscowSans-Medium'" font-size="14px">Новаторская</text>
 				<rect id="line16-1" x="1030" y="2505" fill="#000000" fill-opacity="0" width="120" height="60"/>
             </symbol>
                 <symbol id="line16_2" viewBox="0 0 2850 3449">
-                   <text transform="translate(1063.75 2626)" fill="#000000" font-family="'MoscowSans-Medium'" font-size="14px">Университет дружбы народов</text> 
+                   <text transform="translate(1063.75 2626)" fill="#000000" font-family="'MoscowSans-Medium'" font-size="14px">Университет дружбы народов</text>
 				<rect id="line16-2" x="1040" y="2613" fill="#000000" fill-opacity="0" width="130" height="50"/>
             </symbol>
             <symbol id="line16_1-2">
@@ -3529,7 +3529,7 @@
                 <circle id="line16_2" fill="#007762" fill-opacity="0.01" stroke="#007762" stroke-width="2" cx="1049.7" cy="2622.3" r="5"/>
             </symbol>
                 <symbol id="line16_3" viewBox="0 0 2850 3449">
-                   <text transform="translate(1063.75 2684)" fill="#000000" font-family="'MoscowSans-Medium'" font-size="14px">Генерала Тюленева</text> 
+                   <text transform="translate(1063.75 2684)" fill="#000000" font-family="'MoscowSans-Medium'" font-size="14px">Генерала Тюленева</text>
 				<rect id="line16-3" x="1040" y="2663" fill="#000000" fill-opacity="0" width="130" height="55"/>
             </symbol>
             <symbol id="line16_2-3">
@@ -3538,7 +3538,7 @@
                 <circle id="line16_3" fill="#007762" fill-opacity="0.01" stroke="#007762" stroke-width="2" cx="1049.7" cy="2681" r="5"/>
             </symbol>
             <symbol id="line16_4" viewBox="0 0 2850 3449">
-                   <text transform="translate(1063.75 2743)" fill="#000000" font-family="'MoscowSans-Medium'" font-size="14px">Тютчевская</text> 
+                   <text transform="translate(1063.75 2743)" fill="#000000" font-family="'MoscowSans-Medium'" font-size="14px">Тютчевская</text>
 				<rect id="line16-4" x="1040" y="2727" fill="#000000" fill-opacity="0" width="130" height="50"/>
             </symbol>
             <symbol id="line16_3-4">
@@ -3547,7 +3547,7 @@
                 <circle id="line16_4" fill="#007762" fill-opacity="0.01" stroke="#007762" stroke-width="2" cx="1049.7" cy="2740" r="5"/>
             </symbol>
             <symbol id="line16_5" viewBox="0 0 2850 3449">
-                   <text transform="translate(1063.75 2801)" fill="#1D1D1B" font-family="'MoscowSans-Medium'" font-size="14px">Корниловская</text> 
+                   <text transform="translate(1063.75 2801)" fill="#1D1D1B" font-family="'MoscowSans-Medium'" font-size="14px">Корниловская</text>
 				<rect id="line16-5" x="1040" y="2780" fill="#000000" fill-opacity="0" width="130" height="60"/>
             </symbol>
             <symbol id="line16_4-5">
@@ -3556,7 +3556,7 @@
                 <circle id="line16_5" fill="#007762" fill-opacity="0.01" stroke="#007762" stroke-width="2" cx="1049.7" cy="2799.4" r="5"/>
             </symbol>
             <symbol id="line16_6" viewBox="0 0 2850 3449">
-                   <text transform="translate(1063.75 2862)" fill="#1D1D1B" font-family="'MoscowSans-Medium'" font-size="14px">Коммунарка</text> 
+                   <text transform="translate(1063.75 2862)" fill="#1D1D1B" font-family="'MoscowSans-Medium'" font-size="14px">Коммунарка</text>
 				<rect id="line16-5" x="1040" y="2837" fill="#000000" fill-opacity="0" width="115" height="50"/>
             </symbol>
             <symbol id="line16_5-6">
@@ -3565,7 +3565,7 @@
                 <circle id="line16_6" fill="#007762" fill-opacity="0.01" stroke="#007762" stroke-width="2" cx="1049.7" cy="2859.1" r="5"/>
             </symbol>
             <symbol id="line16_7" viewBox="0 0 2850 3449">
-                   <text transform="translate(1030 2929)" fill="#1D1D1B" font-family="'MoscowSans-Medium'" font-size="14px">Новомосковская</text> 
+                   <text transform="translate(1030 2929)" fill="#1D1D1B" font-family="'MoscowSans-Medium'" font-size="14px">Новомосковская</text>
 				<rect id="line16-5" x="1010" y="2910" fill="#000000" fill-opacity="0" width="115" height="60"/>
             </symbol>
             <symbol id="line16_6-7">
@@ -5715,7 +5715,7 @@
 					 M1598.08,1061.17c0-3.02,2.4501-5.4701,5.4701-5.4701c3.0199,0,5.47,2.4501,5.47,5.4701c0,3.0199-2.4501,5.47-5.47,5.47
 					C1600.53,1066.64,1598.08,1064.1899,1598.08,1061.17z"/>
             </symbol>
-            
+
                         <symbol id="lineD3_39" viewBox="0 0 2850 3449">
                 <text transform="translate(1829 1267.6)" fill="#000000" font-family="'MoscowSans-Medium'" font-size="14px">Митьково</text>
 				<rect id="lineD3-39" x="1808" y="1246" fill="#EA5B0C" fill-opacity="0" width="110" height="60"/>
@@ -5731,7 +5731,7 @@
 					C1600.53,1066.64,1598.08,1064.1899,1598.08,1061.17z"/>
                 <path id="lineD3_39" fill-rule="evenodd" clip-rule="evenodd" d="M1829.06 1278.23C1824.42 1278.23 1820.66 1281.99 1820.66 1286.63C1820.66 1291.27 1824.42 1295.03 1829.06 1295.03C1833.7 1295.03 1837.46 1291.27 1837.46 1286.63C1837.46 1281.99 1833.7 1278.23 1829.06 1278.23ZM1818.46 1286.63C1818.46 1280.77 1823.21 1276.03 1829.06 1276.03C1834.92 1276.03 1839.66 1280.77 1839.66 1286.63C1839.66 1292.48 1834.92 1297.23 1829.06 1297.23C1823.21 1297.23 1818.46 1292.48 1818.46 1286.63ZM1829.06 1283.36C1827.26 1283.36 1825.79 1284.82 1825.79 1286.63C1825.79 1288.43 1827.26 1289.9 1829.06 1289.9C1830.87 1289.9 1832.33 1288.43 1832.33 1286.63C1832.33 1284.82 1830.87 1283.36 1829.06 1283.36ZM1823.59 1286.63C1823.59 1283.61 1826.04 1281.16 1829.06 1281.16C1832.08 1281.16 1834.53 1283.61 1834.53 1286.63C1834.53 1289.65 1832.08 1292.1 1829.06 1292.1C1826.04 1292.1 1823.59 1289.65 1823.59 1286.63Z" fill="#EA5B0C"/>
             </symbol>
-            
+
             <symbol id="lineD3_15" viewBox="0 0 2850 3449">
                 <text transform="translate(1995.23 1489.48)" fill="#000000" font-family="'MoscowSans-Medium'" font-size="14px">Электрозаводская</text>
 				<rect id="lineD3-15" x="1991" y="1429" fill="#EA5B0C" fill-opacity="0" width="94" height="50"/>
@@ -6895,21 +6895,21 @@
             <symbol id="lineD4_16-17">
                <g id="lineD4_16-lineD4_17">
 							<defs>
-								
+
 									<filter id="Adobe_OpacityMaskFilter_00000029033188198170774570000015356615669435139241_" filterUnits="userSpaceOnUse" x="784" y="1467.3" width="294.8" height="174.3">
 									<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 								</filter>
 							</defs>
-							
+
 								<mask maskUnits="userSpaceOnUse" x="784" y="1467.3" width="294.8" height="174.3" id="path-649-outside-151_35514_34493_00000080893924190733759010000012256403595917789113_">
-								
+
 									<rect x="783.1" y="1466.8" fill="#45B384" filter="url(#Adobe_OpacityMaskFilter_00000029033188198170774570000015356615669435139241_)" width="296" height="175"/>
 								<path fill="#45B384" fill-rule="evenodd" clip-rule="evenodd" d="M931.1,1493L931.1,1493l-144.1,143.3c0.8,0.6,1.5,1.3,2.2,2.1l142.7-141.9
 									l0,0l0.7-0.7c7.1-7.1,12.2-11.2,17.9-13.6c5.7-2.3,12.1-3,22.2-3h70.3h0c4,0,8-0.2,12-0.5l0,0h0c7.2-0.5,14.3-2.7,20.3-6.8
 									c-0.9-0.6-1.7-1.3-2.4-2c-5.4,3.5-11.6,5.7-18.1,6c-3.1,0.2-6.2,0.1-9.3,0.1c-0.8,0-1.6,0-2.4,0h-70.4
 									c-10.2,0-17,1-23.3,3.6C943.3,1482,938,1486.2,931.1,1493z"/>
 							</mask>
-							
+
 								<path mask="url(#path-649-outside-151_35514_34493_00000080893924190733759010000012256403595917789113_)" fill="none" stroke="#45B384" stroke-width="4" stroke-miterlimit="10" d="
 								M931.1,1493L931.1,1493l-144.1,143.3c0.8,0.6,1.5,1.3,2.2,2.1l142.7-141.9l0,0l0.7-0.7c7.1-7.1,12.2-11.2,17.9-13.6
 								c5.7-2.3,12.1-3,22.2-3h70.3h0c4,0,8-0.2,12-0.5l0,0h0c7.2-0.5,14.3-2.7,20.3-6.8c-0.9-0.6-1.7-1.3-2.4-2
@@ -6926,18 +6926,18 @@
             <symbol id="lineD4_17-18">
                 <g id="lineD4_17-lineD4_18">
 							<defs>
-								
+
 									<filter id="Adobe_OpacityMaskFilter_00000095307515019792725700000008033818753615252894_" filterUnits="userSpaceOnUse" x="769.5" y="1653.3" width="11.1" height="128.4">
 									<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
 								</filter>
 							</defs>
-							
+
 								<mask maskUnits="userSpaceOnUse" x="769.5" y="1653.3" width="11.1" height="128.4" id="path-648-outside-150_35514_34493_00000079473134099905972620000006532171615883437440_">
-								
+
 									<rect x="769.5" y="1653" fill="#45B384" filter="url(#Adobe_OpacityMaskFilter_00000095307515019792725700000008033818753615252894_)" width="12" height="129"/>
 								<path fill="#45B384" d="M777,1657c-2.3,5.7-2.5,10.3-2.5,20.3l0,102.4h-3v-102.3c0-7.8,0.4-13.8,1.8-19L777,1657z"/>
 							</mask>
-							
+
 								<path mask="url(#path-648-outside-150_35514_34493_00000079473134099905972620000006532171615883437440_)" fill="none" stroke="#45B384" stroke-width="4" stroke-miterlimit="10" d="
 								M777,1657c-2.3,5.7-2.5,10.3-2.5,20.3l0,102.4h-3v-102.3c0-7.8,0.4-13.8,1.8-19L777,1657z"/>
 						</g>
@@ -7706,10 +7706,10 @@
 				<stop  offset="0" style="stop-color:#89CDCF"/>
 				<stop  offset="1" style="stop-color:#D51519"/>
 			</linearGradient>
-			
+
 				<circle id="station-24" fill="none" stroke="url(#station-24_00000111165013475691725410000002534635830732522172_)" stroke-width="7" cx="929" cy="2438" r="12"/>
             </symbol>
-            
+
                         <symbol id="line11_15-line16_1">
 <linearGradient id="paint70_linear_73232_10178" x1="1049.68" y1="2495" x2="1049.68" y2="2519" gradientUnits="userSpaceOnUse">
 <stop stop-color="#88CDCF"/>
@@ -7717,7 +7717,7 @@
 </linearGradient>
 					<circle id="line16_1" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#paint70_linear_73232_10178)" stroke-width="7" cx="1049.68" cy="2507" r="12"/>
             </symbol>
-            
+
                                     <symbol id="line1_26-line16_7">
 <linearGradient id="line16_7_00000151522348293461190690000003076389413176695681_" gradientUnits="userSpaceOnUse" x1="999.975" y1="278.0749" x2="1016.975" y2="261.1749" gradientTransform="matrix(1 0 0 1 0 2658)">
 	<stop  offset="0" style="stop-color:#D51519"/>
@@ -8415,7 +8415,7 @@
 							<stop  offset="0" style="stop-color:#20BDEF"/>
 							<stop  offset="1" style="stop-color:#FFDD02"/>
 						</linearGradient>
-						
+
 							<circle id="line8A_1" fill="none" stroke="url(#line8A_1_00000137847866986581237320000015974005887819568289_)" stroke-width="7" cx="809" cy="1730.4" r="16"/>
             </symbol>
 
@@ -8433,7 +8433,7 @@
 							<stop  offset="0" style="stop-color:#D6191D"/>
 							<stop  offset="1" style="stop-color:#20BDEF"/>
 						</linearGradient>
-						
+
 							<circle id="line4_6" fill="#F1F1F1" fill-opacity="1.000000e-02" stroke="url(#line4_6_00000090257612219618940100000011354367948504617910_)" stroke-width="7" cx="771.5" cy="1642.6" r="16"/>
             </symbol>
 
@@ -8442,7 +8442,7 @@
 							<stop  offset="0" style="stop-color:#20BDEF"/>
 							<stop  offset="1" style="stop-color:#47B485"/>
 						</linearGradient>
-						
+
 							<circle id="line4_6" fill="#F1F1F1" fill-opacity="1.000000e-02" stroke="url(#line4_6_00000090257612219618940100000011354367948504617910_)" stroke-width="7" cx="771.5" cy="1642.6" r="16"/>
             </symbol>
 
@@ -8451,7 +8451,7 @@
 							<stop  offset="0" style="stop-color:#D6191D"/>
 							<stop  offset="1" style="stop-color:#47B485"/>
 						</linearGradient>
-						
+
 							<circle id="line4_6" fill="#F1F1F1" fill-opacity="1.000000e-02" stroke="url(#line4_6_00000090257612219618940100000011354367948504617910_)" stroke-width="7" cx="771.5" cy="1642.6" r="16"/>
             </symbol>
 
@@ -8896,7 +8896,7 @@
 
 					<circle fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line11_5_00000033326844391045017470000006196510382208801949_)" stroke-width="7" cx="2210.9399" cy="1758.12" r="16"/>
             </symbol>
-            
+
             <symbol id="line14_21-line7_6">
             <g id="line7_6-line14_21">
 					<path fill="#ACACAC" d="M722.831,1231.6801c0.748,0.36,1.643,0.0399,1.997-0.7101
@@ -8917,7 +8917,7 @@
 					C714.933,1221.97,712.484,1219.52,712.484,1216.5z"/>
                 <circle id="line7_6" fill="#F1F1F1" fill-opacity="0.01" stroke="#943E90" stroke-width="5.6" cx="738.4" cy="1248.8" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line14_22-line7_6">
             <g id="line7_6-line14_22">
 					<path fill="#ACACAC" d="M749.008,1236.4c0.259-0.79-0.169-1.63-0.955-1.89c-0.787-0.26-1.6349,0.17-1.894,0.95
@@ -8963,7 +8963,7 @@
 					 M771.484,1144.5c0-3.02,2.45-5.47,5.471-5.47s5.47,2.45,5.47,5.47s-2.449,5.47-5.47,5.47
 					C773.933,1149.97,771.484,1147.52,771.484,1144.5z"/>
             </symbol>
-            
+
             <symbol id="line11_4-line7_7">
                 <linearGradient id="line7_7-line11_4_00000045579559479679347660000016324578800193575839_" gradientUnits="userSpaceOnUse" x1="744.0031" y1="-1288.1091" x2="754.523" y2="-1277.5891" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 					<stop  offset="0.2781" style="stop-color:#943E90"/>
@@ -8974,7 +8974,7 @@
                 <circle id="line7_7" fill="#F1F1F1" fill-opacity="0.01" stroke="#943E90" stroke-width="5.6" cx="738.4" cy="1314.92" r="7.7"/>
                 <circle id="line11_4" fill="#F1F1F1" fill-opacity="0.01" stroke="#88CDCF" stroke-width="5.6" cx="761.125" cy="1337.73" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line11_4-line14_20">
                 <g id="line11_4-line14_20">
 					<path fill="#ACACAC" d="M707.755,1324.12c0.801,0.22,1.623-0.26,1.838-1.0599
@@ -9001,7 +9001,7 @@
 					s5.47,2.45,5.47,5.47s-2.449,5.47-5.47,5.47S690.03,1318.52,690.03,1315.5z"/>
                 <circle id="line11_4" fill="#F1F1F1" fill-opacity="0.01" stroke="#88CDCF" stroke-width="5.6" cx="761.125" cy="1337.73" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line14_20-line7_7">
                 <g id="line7_7-line14_20">
 					<path fill="#ACACAC" d="M724.767,1316.41c0.767-0.3101,1.134-1.1901,0.8199-1.9501
@@ -9022,7 +9022,7 @@
 					s5.47,2.45,5.47,5.47s-2.449,5.47-5.47,5.47S690.03,1318.52,690.03,1315.5z"/>
                 <circle id="line7_7" fill="#F1F1F1" fill-opacity="0.01" stroke="#943E90" stroke-width="5.6" cx="738.4" cy="1314.92" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line7_8-lineD1_18">
             <g id="line7_8-lineD1_18">
 					<path id="Vector_238" fill="#ACACAC" d="M899.55,1488.92c0.828,0,1.5-0.67,1.5-1.5c0-0.8301-0.672-1.5-1.5-1.5
@@ -9036,7 +9036,7 @@
 					C902.82,1470.59,901.356,1469.13,899.55,1469.13z M894.08,1472.4c0-3.02,2.449-5.47,5.47-5.47s5.47,2.45,5.47,5.47
 					s-2.449,5.47-5.47,5.47S894.08,1475.42,894.08,1472.4z"/>
             </symbol>
-            
+
             <symbol id="line5_9-line7_10">
                 <linearGradient id="line7_10-line5_9_00000156562485993317943040000006478760461490182803_" gradientUnits="userSpaceOnUse" x1="1035.0425" y1="-963.3376" x2="1045.5625" y2="-973.8577" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 					<stop  offset="0.2781" style="stop-color:#915133"/>
@@ -9047,16 +9047,16 @@
                 <circle id="line7_10" fill="#F1F1F1" fill-opacity="0.01" stroke="#943E90" stroke-width="5.6" cx="1051.7" cy="1627.14" r="7.7"/>
                 <ellipse id="line5_9" transform="matrix(0.9239 -0.3827 0.3827 0.9239 -552.5495 519.5497)" fill="#F1F1F1" fill-opacity="0.01" stroke="#915133" stroke-width="5.6" cx="1029.7" cy="1648.7" rx="7.7" ry="7.6999"/>
             </symbol>
-            
+
             <symbol id="line5_3-line7_14">
             <linearGradient id="14_00000047764959360262594060000002928238746679396743_" gradientUnits="userSpaceOnUse" x1="1787.9399" y1="-759.2302" x2="1787.9399" y2="-735.2302" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#925335"/>
 						<stop  offset="1" style="stop-color:#954091"/>
 					</linearGradient>
-					
+
 						<circle id="line7_14" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#14_00000047764959360262594060000002928238746679396743_)" stroke-width="7" cx="1787.9399" cy="1860.88" r="12"/>
             </symbol>
-            
+
             <symbol id="line5_3-line8_7">
                 <linearGradient id="line5_3-line8_7_00000051369350584035728730000007039353869205091517_" gradientUnits="userSpaceOnUse" x1="1788.23" y1="-718.3201" x2="1788.23" y2="-733.2001" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 					<stop  offset="0.2781" style="stop-color:#FFDD00"/>
@@ -9067,7 +9067,7 @@
             <circle id="line5_3" fill="#F1F1F1" fill-opacity="0.01" stroke="#925335" stroke-width="7" cx="1787.9399" cy="1860.88" r="12"/>
                 <circle id="line8_7" fill="#F1F1F1" fill-opacity="0.01" stroke="#FFDD00" stroke-width="5.6" cx="1787.7" cy="1897.7" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line7_14-line8_7">
                 <linearGradient id="line7_14-line8_7_00000051369350584035728730000007039353869205091517_" gradientUnits="userSpaceOnUse" x1="1788.23" y1="-718.3201" x2="1788.23" y2="-733.2001" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 					<stop  offset="0.2781" style="stop-color:#FFDD00"/>
@@ -9078,7 +9078,7 @@
             <circle id="line17_14" fill="#F1F1F1" fill-opacity="0.01" stroke="#954091" stroke-width="7" cx="1787.9399" cy="1860.88" r="12"/>
                 <circle id="line8_7" fill="#F1F1F1" fill-opacity="0.01" stroke="#FFDD00" stroke-width="5.6" cx="1787.7" cy="1897.7" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line10_16-line7_15">
             <linearGradient id="line7_15-line10_16_00000026853132505534032860000000766492288193447860_" gradientUnits="userSpaceOnUse" x1="1876.02" y1="-623.6002" x2="1886.54" y2="-634.1202" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 					<stop  offset="0.2781" style="stop-color:#B4CC04"/>
@@ -9089,7 +9089,7 @@
                 <circle id="line7_15" fill="#F1F1F1" fill-opacity="0.01" stroke="#943E90" stroke-width="5.6" cx="1893.7" cy="1966.7" r="7.7"/>
                 <circle id="line10_16" fill="#F1F1F1" fill-opacity="0.01" stroke="#B4CC04" stroke-width="5.6" cx="1871.26" cy="1989.87" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line14_9-line7_16">
             <g id="line7_16-line14_9">
 					<path fill="#ACACAC" d="M1976.11,2030.7c0.83,0,1.5-0.6699,1.5-1.5c0-0.83-0.67-1.5-1.5-1.5s-1.5,0.67-1.5,1.5
@@ -9114,16 +9114,16 @@
 					 M1970.5699,1992.97c0-3.02,2.4501-5.47,5.4701-5.47s5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47
 					S1970.5699,1995.99,1970.5699,1992.97z"/>
             </symbol>
-            
+
             <symbol id="line7_17-lineD2_22">
             <linearGradient id="17_00000163765509063233487990000018342108162280795269_" gradientUnits="userSpaceOnUse" x1="2107" y1="-441.1102" x2="2107" y2="-417.1102" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#E94483"/>
 						<stop  offset="1" style="stop-color:#954091"/>
 					</linearGradient>
-					
+
 						<circle id="line7_17" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#17_00000163765509063233487990000018342108162280795269_)" stroke-width="7" cx="2107" cy="2179" r="12"/>
             </symbol>
-            
+
             <symbol id="line11_24-line7_17">
                 <g id="line7_17-line11_24">
 					<path fill="#ACACAC" d="M2135.2,2181.2c0.8301,0,1.5-0.6699,1.5-1.5c0-0.8298-0.6699-1.5-1.5-1.5
@@ -9136,7 +9136,7 @@
                 <circle id="line7_17" fill="#F1F1F1" fill-opacity="0.01" stroke="#954091" stroke-width="7" cx="2107" cy="2179" r="12"/>
                 <circle id="line11_24" fill="#F1F1F1" fill-opacity="0.01" stroke="#88CDCF" stroke-width="5.6" cx="2157.7" cy="2179.7" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line11_24-lineD2_22">
                 <g id="lineD2_22-line11_24">
 					<path fill="#ACACAC" d="M2135.2,2181.2c0.8301,0,1.5-0.6699,1.5-1.5c0-0.8298-0.6699-1.5-1.5-1.5
@@ -9149,7 +9149,7 @@
                 <circle id="lineD2_22" fill="#F1F1F1" fill-opacity="0.01" stroke="#E94483" stroke-width="7" cx="2107" cy="2179" r="12"/>
                 <circle id="line11_24" fill="#F1F1F1" fill-opacity="0.01" stroke="#88CDCF" stroke-width="5.6" cx="2157.7" cy="2179.7" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line7_19-lineD3_21">
             <g id="line7_19-lineD3_21">
 					<path id="Vector_365" fill="#ACACAC" d="M2236.8301,2289.6399c0,0.8301,0.6699,1.5,1.5,1.5c0.8298,0,1.5-0.6699,1.5-1.5
@@ -9194,16 +9194,16 @@
 					c1.8101,0,3.27-1.46,3.27-3.27S2326.05,2288.1699,2324.24,2288.1699z M2318.77,2291.4399c0-3.02,2.45-5.47,5.47-5.47
 					s5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47S2318.77,2294.46,2318.77,2291.4399z"/>
             </symbol>
-                
+
             <symbol id="line7_20-lineD3_22">
             <linearGradient id="20_00000051372358557695169990000003228438856433058711_" gradientUnits="userSpaceOnUse" x1="2280.6499" y1="-265.9803" x2="2280.6499" y2="-241.9803" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#EA5D0E"/>
 						<stop  offset="1" style="stop-color:#943E90"/>
 					</linearGradient>
-					
+
 						<circle id="line7_20" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#20_00000051372358557695169990000003228438856433058711_)" stroke-width="7" cx="2280.6499" cy="2354.1299" r="12"/>
             </symbol>
-            
+
             <symbol id="line15_5-line7_21">
             <linearGradient id="line7_21-line15_5_00000052795273097017893640000007678246024998647168_" gradientUnits="userSpaceOnUse" x1="2300.1321" y1="-200.5778" x2="2310.6621" y2="-211.0978" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 					<stop  offset="0.2781" style="stop-color:#EE7BAE"/>
@@ -9214,7 +9214,7 @@
                 <circle id="line7_21" fill="#F1F1F1" fill-opacity="0.01" stroke="#943E90" stroke-width="5.6" cx="2316.7" cy="2389.7" r="7.7"/>
                 <circle id="line15_5" fill="#F1F1F1" fill-opacity="0.01" stroke="#EE7BAE" stroke-width="5.6" cx="2295.1001" cy="2412.9099" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line7_21-lineD3_23">
             <g id="line7_21-lineD3_23">
 					<path id="Vector_381" fill="#ACACAC" d="M2241.21,2406.8701c0.1899,0.8098,0.99,1.3098,1.8,1.1299
@@ -9268,7 +9268,7 @@
 					s1.4602,3.27,3.27,3.27c1.8101,0,3.27-1.46,3.27-3.27S2224.74,2409.1899,2222.9299,2409.1899z M2217.46,2412.46
 					c0-3.02,2.45-5.47,5.47-5.47s5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47S2217.46,2415.48,2217.46,2412.46z"/>
             </symbol>
-            
+
             <symbol id="line15_5-lineD3_23">
             <g id="line15_5-lineD3_23">
 					<path id="Vector_395" fill="#ACACAC" d="M2241.27,2413.5901c0,0.8298,0.6699,1.5,1.5,1.5s1.5-0.6702,1.5-1.5
@@ -9299,7 +9299,7 @@
 					s1.4602,3.27,3.27,3.27c1.8101,0,3.27-1.46,3.27-3.27S2224.74,2409.1899,2222.9299,2409.1899z M2217.46,2412.46
 					c0-3.02,2.45-5.47,5.47-5.47s5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47S2217.46,2415.48,2217.46,2412.46z"/>
             </symbol>
-            
+
             <symbol id="line8_1-lineD4_6">
             <g id="line8_1-lineD4_6">
 					<path id="Vector_404" fill="#ACACAC" d="M2348.26,1322c0.5901-0.58,0.5901-1.53,0-2.12c-0.5801-0.59-1.53-0.59-2.1201,0
@@ -9325,9 +9325,9 @@
 					c0,1.8099,1.4602,3.27,3.27,3.27c1.8101,0,3.27-1.4601,3.27-3.27C2327.6799,1296.95,2326.22,1295.49,2324.4099,1295.49z
 					 M2318.9399,1298.76c0-3.02,2.45-5.47,5.47-5.47s5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47S2318.9399,1301.78,2318.9399,1298.76z"/>
             </symbol>
-                
-            
-            
+
+
+
             <symbol id="line8_2-lineD4_7">
 				<g id="line8_2-lineD4_7">
 					<path id="Vector_410" fill="#ACACAC" d="M2310.6299,1413.15c0,0.83,0.6702,1.5,1.5,1.5c0.8301,0,1.5-0.67,1.5-1.5
@@ -9353,7 +9353,7 @@
 					c0,1.8099,1.4602,3.27,3.27,3.27c1.8101,0,3.27-1.4601,3.27-3.27C2327.6799,1420.84,2326.22,1419.38,2324.4099,1419.38z
 					 M2318.9399,1422.65c0-3.02,2.45-5.47,5.47-5.47s5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47S2318.9399,1425.67,2318.9399,1422.65z"/>
             </symbol>
-                
+
             <symbol id="line14_5-line8_4">
             <g id="line8_4-line14_5">
 					<path id="Vector_239" fill="#ACACAC" d="M2237.0701,1481.55c0,0.83,0.6699,1.5,1.5,1.5c0.8298,0,1.5-0.67,1.5-1.5
@@ -9368,7 +9368,7 @@
 					c0-3.02,2.4399-5.47,5.47-5.47c3.02,0,5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47
 					C2249.9299,1485.97,2247.49,1483.52,2247.49,1480.5z"/>
             </symbol>
-            
+
             <symbol id="line11_26-line8_5">
 <linearGradient id="transition-64_00000124128434504109339900000017570707069449013938_" gradientUnits="userSpaceOnUse" x1="2108.8" y1="-1039.8999" x2="2108.8" y2="-1054.7999" gradientTransform="matrix(1 0 0 1 0 2658)">
 	<stop  offset="0.3" style="stop-color:#88CDCF"/>
@@ -9379,7 +9379,7 @@
                 <circle id="line8_5" fill="#F1F1F1" fill-opacity="0.01" stroke="#FFDD00" stroke-width="5.6" cx="2108.7" cy="1595.7" r="7.7"/>
                 <circle id="line11_26" fill="#F1F1F1" fill-opacity="0.01" stroke="#88CDCF" stroke-width="5.6" cx="2108.8101" cy="1625.09" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line11_26-lineD3_17">
                 <g id="line11_26-lineD3_17">
 					<path id="Vector_361" fill="#ACACAC" d="M2121.1799,1615.25c0.5901-0.58,0.5901-1.53,0-2.12c-0.5798-0.58-1.53-0.58-2.1199,0
@@ -9398,7 +9398,7 @@
 					s5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47S2133.03,1598.5,2133.03,1595.48z"/>
                 <circle id="line11_26" fill="#F1F1F1" fill-opacity="0.01" stroke="#88CDCF" stroke-width="5.6" cx="2108.8101" cy="1625.09" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line8_5-lineD3_17">
             <g id="line8_5-lineD3_17">
 					<path id="Vector_360" fill="#ACACAC" d="M2123.7,1598.48c0.8201,0,1.5-0.6699,1.5-1.5c0-0.83-0.6799-1.5-1.5-1.5
@@ -9412,7 +9412,7 @@
 					s3.27-1.46,3.27-3.27C2141.77,1593.67,2140.3101,1592.21,2138.5,1592.21z M2133.03,1595.48c0-3.02,2.45-5.47,5.47-5.47
 					s5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47S2133.03,1598.5,2133.03,1595.48z"/>
             </symbol>
-            
+
             <symbol id="line10_15-line8_6">
             <linearGradient id="line8_6-line10_15_00000152258431320792610490000017186772543145696903_" gradientUnits="userSpaceOnUse" x1="1888.6799" y1="-801.2601" x2="1878.1599" y2="-811.7802" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 					<stop  offset="0.2781" style="stop-color:#FFDD00"/>
@@ -9423,43 +9423,43 @@
                 <circle id="line8_6" fill="#F1F1F1" fill-opacity="0.01" stroke="#FFDD00" stroke-width="5.6" cx="1893.7" cy="1810.7" r="7.7"/>
                 <circle id="line10_15" fill="#F1F1F1" fill-opacity="0.01" stroke="#B4CC04" stroke-width="5.6" cx="1871.26" cy="1790.67" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line8A_3-lineD4_20">
             <linearGradient id="line8A_3_00000104702677764357345010000013786564514920517254_" gradientUnits="userSpaceOnUse" x1="747.5754" y1="-540.5607" x2="764.4334" y2="-523.6508" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#47B485"/>
 						<stop  offset="1" style="stop-color:#FFDD02"/>
 					</linearGradient>
-					
+
 						<circle id="line8A_3" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line8A_3_00000104702677764357345010000013786564514920517254_)" stroke-width="7" cx="756" cy="2076" r="12"/>
             </symbol>
-            
+
             <symbol id="line11_13-line8A_6">
             <linearGradient id="line11_13_00000168091713121460923820000004294615621538810045_" gradientUnits="userSpaceOnUse" x1="738" y1="-361.0201" x2="738" y2="-337.0201" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#88CDCF"/>
 						<stop  offset="1" style="stop-color:#FFDD02"/>
 					</linearGradient>
-					
+
 						<circle id="line11_13" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line11_13_00000168091713121460923820000004294615621538810045_)" stroke-width="7" cx="738" cy="2259.0901" r="12"/>
             </symbol>
-            
+
             <symbol id="line14_28-line9_4">
             <linearGradient id="line9_4_00000111911689424885125960000017604327314831310743_" gradientUnits="userSpaceOnUse" x1="1453" y1="-1761.77" x2="1453" y2="-1737.77" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#D6191D"/>
 						<stop  offset="1" style="stop-color:#AEACAD"/>
 					</linearGradient>
-					
+
 						<circle id="line9_4" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line9_4_00000111911689424885125960000017604327314831310743_)" stroke-width="7" cx="1453" cy="858.34" r="12"/>
             </symbol>
-            
+
             <symbol id="line10_7-line9_5">
             <linearGradient id="line10_7_00000116232574165324658370000006242747623690522804_" gradientUnits="userSpaceOnUse" x1="1380.36" y1="-1665.3921" x2="1380.36" y2="-1641.3921" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#B5CC06"/>
 						<stop  offset="1" style="stop-color:#AEACAD"/>
 					</linearGradient>
-					
+
 						<circle id="line10_7" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line10_7_00000116232574165324658370000006242747623690522804_)" stroke-width="7" cx="1380.36" cy="954.718" r="12"/>
             </symbol>
-            
+
              <symbol id="line10_7-lineD3_13">
                  <g id="line10_7-lineD3_13">
 					<path fill="#ACACAC" d="M1380.36,976.5c0.83,0,1.5-0.672,1.5-1.5s-0.67-1.5-1.5-1.5s-1.5,0.672-1.5,1.5
@@ -9472,7 +9472,7 @@
 					s1.4601,3.27,3.27,3.27c1.8101,0,3.27-1.464,3.27-3.27S1382.17,986.105,1380.36,986.105z M1374.89,989.375
 					c0-3.021,2.45-5.47,5.47-5.47s5.47,2.449,5.47,5.47s-2.45,5.47-5.47,5.47S1374.89,992.396,1374.89,989.375z"/>
             </symbol>
-            
+
             <symbol id="line9_5-lineD3_13">
                  <g id="line9_5-lineD3_13">
 					<path fill="#ACACAC" d="M1380.36,976.5c0.83,0,1.5-0.672,1.5-1.5s-0.67-1.5-1.5-1.5s-1.5,0.672-1.5,1.5
@@ -9485,43 +9485,43 @@
 					s1.4601,3.27,3.27,3.27c1.8101,0,3.27-1.464,3.27-3.27S1382.17,986.105,1380.36,986.105z M1374.89,989.375
 					c0-3.021,2.45-5.47,5.47-5.47s5.47,2.449,5.47,5.47s-2.45,5.47-5.47,5.47S1374.89,992.396,1374.89,989.375z"/>
             </symbol>
-            
+
             <symbol id="line9_6-lineD1_14">
             <linearGradient id="line9_6_00000138539426677699123040000002459737616913649831_" gradientUnits="userSpaceOnUse" x1="1292.61" y1="-1577.78" x2="1292.61" y2="-1553.78" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#F7A702"/>
 						<stop  offset="1" style="stop-color:#AEACAD"/>
 					</linearGradient>
-					
+
 						<circle id="line9_6" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line9_6_00000138539426677699123040000002459737616913649831_)" stroke-width="7" cx="1292.61" cy="1042.33" r="12"/>
             </symbol>
-            
+
             <symbol id="line9_8-lineD4_15">
             <linearGradient id="line9_8_00000049198099257931428480000012611877312215426486_" gradientUnits="userSpaceOnUse" x1="1182.7845" y1="-1408.4841" x2="1200.7946" y2="-1376.4841" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#AEACAD"/>
 						<stop  offset="1" style="stop-color:#47B485"/>
 					</linearGradient>
-					
+
 						<circle id="line9_8" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line9_8_00000049198099257931428480000012611877312215426486_)" stroke-width="7" cx="1192" cy="1216" r="16"/>
             </symbol>
-            
+
             <symbol id="line11_1-lineD4_15">
             <linearGradient id="lineD4_15_00000049198099257931428480000012611877312215426486_" gradientUnits="userSpaceOnUse" x1="1182.7845" y1="-1408.4841" x2="1200.7946" y2="-1376.4841" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#89CDCF"/>
 						<stop  offset="1" style="stop-color:#47B485"/>
 					</linearGradient>
-					
+
 						<circle id="lineD4_15" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#lineD4_15_00000049198099257931428480000012611877312215426486_)" stroke-width="7" cx="1192" cy="1216" r="16"/>
             </symbol>
-            
+
             <symbol id="line11_1-line9_8">
             <linearGradient id="line11_1_00000049198099257931428480000012611877312215426486_" gradientUnits="userSpaceOnUse" x1="1182.7845" y1="-1408.4841" x2="1200.7946" y2="-1376.4841" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#AEACAD"/>
 						<stop  offset="1" style="stop-color:#89CDCF"/>
 					</linearGradient>
-					
+
 						<circle id="line11_1" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line11_1_00000049198099257931428480000012611877312215426486_)" stroke-width="7" cx="1192" cy="1216" r="16"/>
             </symbol>
-            
+
             <symbol id="line11_1-lineD1_16">
             <g id="line11_1-lineD1_16">
 					<path id="Vector_465" fill="#ACACAC" d="M1209.46,1233.88c0.8301,0,1.5-0.6801,1.5-1.5c0-0.83-0.6699-1.5-1.5-1.5
@@ -9536,7 +9536,7 @@
 					 M1214.8199,1243.39c0-3.02,2.4501-5.47,5.4701-5.47s5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47
 					S1214.8199,1246.41,1214.8199,1243.39z"/>
             </symbol>
-            
+
             <symbol id="line9_8-lineD1_16">
             <g id="line9_8-lineD1_16">
 					<path id="Vector_465" fill="#ACACAC" d="M1209.46,1233.88c0.8301,0,1.5-0.6801,1.5-1.5c0-0.83-0.6699-1.5-1.5-1.5
@@ -9551,7 +9551,7 @@
 					 M1214.8199,1243.39c0-3.02,2.4501-5.47,5.4701-5.47s5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47
 					S1214.8199,1246.41,1214.8199,1243.39z"/>
             </symbol>
-            
+
             <symbol id="lineD1_16-lineD4_15">
             <g id="line9_8-lineD1_16">
 					<path id="Vector_465" fill="#ACACAC" d="M1209.46,1233.88c0.8301,0,1.5-0.6801,1.5-1.5c0-0.83-0.6699-1.5-1.5-1.5
@@ -9566,7 +9566,7 @@
 					 M1214.8199,1243.39c0-3.02,2.4501-5.47,5.4701-5.47s5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47
 					S1214.8199,1246.41,1214.8199,1243.39z"/>
             </symbol>
-            
+
             <symbol id="line5_11-line9_9">
             <linearGradient id="line5_11-line9_9_00000112603852510297162750000010918575307480761479_" gradientUnits="userSpaceOnUse" x1="1257.8199" y1="-1253.95" x2="1257.8199" y2="-1268.8201" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 					<stop  offset="0.2781" style="stop-color:#915133"/>
@@ -9577,7 +9577,7 @@
                 <circle id="line5_11" fill="#F1F1F1" fill-opacity="0.01" stroke="#915133" stroke-width="5.6" cx="1257.7" cy="1361.7" r="7.7"/>
                 <circle id="line9_9" fill="#F1F1F1" fill-opacity="0.01" stroke="#ADABAC" stroke-width="5.6" cx="1257.9301" cy="1330.5" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line10_12-line9_10">
             <linearGradient id="line10_12-line9_10_00000085233772051742256940000009329270380165120684_" gradientUnits="userSpaceOnUse" x1="1434.4" y1="-1104.2102" x2="1423.88" y2="-1093.6902" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 					<stop  offset="0.2781" style="stop-color:#B4CC04"/>
@@ -9588,7 +9588,7 @@
                 <circle id="line10_12" fill="#F1F1F1" fill-opacity="0.01" stroke="#B4CC04" stroke-width="5.6" cx="1438.7" cy="1498.61" r="7.7"/>
                 <circle id="line9_10" fill="#F1F1F1" fill-opacity="0.01" stroke="#ADABAC" stroke-width="5.6" cx="1418.1" cy="1520.08" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line5_5-line9_14">
             <linearGradient id="line5_5-line9_14_00000004526453278346948560000014335510808330317488_" gradientUnits="userSpaceOnUse" x1="1433.5875" y1="-496.3377" x2="1423.0675" y2="-506.8577" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 					<stop  offset="0.2781" style="stop-color:#915133"/>
@@ -9599,7 +9599,7 @@
                 <circle id="line5_5" fill="#F1F1F1" fill-opacity="0.01" stroke="#915133" stroke-width="5.6" cx="1438.7" cy="2116.7" r="7.7"/>
                 <circle id="line9_14" fill="#F1F1F1" fill-opacity="0.01" stroke="#ADABAC" stroke-width="5.6" cx="1418.09" cy="2096.0701" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line14_13-line9_16">
             <g id="line14_13-line9_16">
 					<path id="Vector_255" fill="#ACACAC" d="M1437.1,2328.47c0.5801,0.5801,1.53,0.5801,2.12,0c0.5801-0.5901,0.5801-1.54,0-2.1199
@@ -9626,7 +9626,7 @@
 					c3.02,0,5.47,2.4399,5.47,5.47c0,3.02-2.45,5.47-5.47,5.47C1457.36,2312.3999,1454.92,2309.95,1454.92,2306.9299z"/>
                 <circle id="line9_16" fill="#F1F1F1" fill-opacity="0.01" stroke="#ADABAC" stroke-width="5.6" cx="1418.09" cy="2341.6201" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line11_18-line9_19">
             <linearGradient id="line11_18-line9_19_00000010273260243944173610000011516079153460688284_" gradientUnits="userSpaceOnUse" x1="1401.21" y1="-23.5301" x2="1411.21" y2="-33.5301" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 					<stop  offset="0.2781" style="stop-color:#87CCCF"/>
@@ -9637,7 +9637,7 @@
                 <circle id="line11_18" fill="#F1F1F1" fill-opacity="0.01" stroke="#88CDCF" stroke-width="5.6" cx="1395.6801" cy="2590.3601" r="7.7"/>
                 <circle id="line9_19" fill="#F1F1F1" fill-opacity="0.01" stroke="#ADABAC" stroke-width="5.6" cx="1418.09" cy="2567.52" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line12_3-line9_25">
             <linearGradient id="line12_3-line9_25_00000026156057470378077730000017948217254822022544_" gradientUnits="userSpaceOnUse" x1="1401.1801" y1="329.8897" x2="1411.1801" y2="319.8898" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 					<stop  offset="0.2781" style="stop-color:#BAC8E8"/>
@@ -9648,43 +9648,43 @@
                 <circle id="line12_3" fill="#F1F1F1" fill-opacity="0.01" stroke="#BAC8E8" stroke-width="5.6" cx="1395.7" cy="2943.1899" r="7.7"/>
                 <circle id="line9_25" fill="#F1F1F1" fill-opacity="0.01" stroke="#ADABAC" stroke-width="5.6" cx="1418.09" cy="2920.71" r="7.7"/>
             </symbol>
-            
+
             <symbol id="line10_2-lineD1_8">
             <linearGradient id="line10_2_00000131327468389959711310000007867316830049124280_" gradientUnits="userSpaceOnUse" x1="1292.61" y1="-1987.9802" x2="1292.61" y2="-1963.9802" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#B5CC06"/>
 						<stop  offset="1" style="stop-color:#F7A702"/>
 					</linearGradient>
-					
+
 						<circle id="line10_2" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line10_2_00000131327468389959711310000007867316830049124280_)" stroke-width="7" cx="1292.61" cy="632.13" r="12"/>
             </symbol>
-            
+
             <symbol id="line10_6-lineD1_12">
             <linearGradient id="line10_6-lineD1_11_00000030466535489567665610000006916960458894074042_" gradientUnits="userSpaceOnUse" x1="1305.3394" y1="-1753.8314" x2="1280.0894" y2="-1728.4192" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#B5CC06"/>
 						<stop  offset="1" style="stop-color:#F7A702"/>
 					</linearGradient>
-					
+
 						<circle id="line10_6-lineD1_12" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line10_6-lineD1_11_00000030466535489567665610000006916960458894074042_)" stroke-width="7" cx="1292.6" cy="867.1" r="16"/>
             </symbol>
-            
+
             <symbol id="line10_6-line14_27">
             <linearGradient id="line10_6-line14_27_00000030466535489567665610000006916960458894074042_" gradientUnits="userSpaceOnUse" x1="1305.3394" y1="-1753.8314" x2="1280.0894" y2="-1728.4192" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#B5CC06"/>
 						<stop  offset="1" style="stop-color:#D6191D"/>
 					</linearGradient>
-					
+
 						<circle id="line10_6-line14_27" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line10_6-line14_27_00000030466535489567665610000006916960458894074042_)" stroke-width="7" cx="1292.6" cy="867.1" r="16"/>
             </symbol>
-            
+
             <symbol id="line14_27-lineD1_12">
             <linearGradient id="line14_27-lineD1_11_00000030466535489567665610000006916960458894074042_" gradientUnits="userSpaceOnUse" x1="1305.3394" y1="-1753.8314" x2="1280.0894" y2="-1728.4192" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#F7A702"/>
 						<stop  offset="1" style="stop-color:#D6191D"/>
 					</linearGradient>
-					
+
 						<circle id="line14_27-lineD1_12" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line14_27-lineD1_11_00000030466535489567665610000006916960458894074042_)" stroke-width="7" cx="1292.6" cy="867.1" r="16"/>
             </symbol>
-            
+
             <symbol id="line10_9-lineD3_14">
             <g id="line10_9-lineD3_14">
 					<path id="Vector_320" fill="#ACACAC" d="M1432.99,1088.38c0.83,0,1.5-0.67,1.5-1.5s-0.67-1.5-1.5-1.5s-1.5,0.67-1.5,1.5
@@ -9769,7 +9769,7 @@
 					 M1598.08,1061.17c0-3.02,2.4501-5.4701,5.4701-5.4701c3.0199,0,5.47,2.4501,5.47,5.4701c0,3.0199-2.4501,5.47-5.47,5.47
 					C1600.53,1066.64,1598.08,1064.1899,1598.08,1061.17z"/>
             </symbol>
-            
+
             <symbol id="line10_17-line14_10">
             <g id="line10_17-line14_10">
 					<path id="Vector_242" fill="#ACACAC" d="M1881.98,2068.3999c0.8201,0,1.5-0.6699,1.5-1.5c0-0.8298-0.6799-1.5-1.5-1.5
@@ -9784,7 +9784,7 @@
 					C1894.85,2075.77,1893.38,2074.3101,1891.58,2074.3101z M1886.11,2077.5801c0-3.02,2.4501-5.47,5.47-5.47
 					c3.02,0,5.4701,2.45,5.4701,5.47s-2.4501,5.47-5.4701,5.47C1888.5601,2083.05,1886.11,2080.6001,1886.11,2077.5801z"/>
             </symbol>
-            
+
             <symbol id="line10_18-line14_10">
             <g id="line10_18-line14_10">
 					<path id="Vector_243" fill="#ACACAC" d="M1880.52,2142.9399c0.8099,0.1501,1.6-0.3899,1.75-1.2
@@ -9831,16 +9831,16 @@
 					C1894.85,2075.77,1893.38,2074.3101,1891.58,2074.3101z M1886.11,2077.5801c0-3.02,2.4501-5.47,5.47-5.47
 					c3.02,0,5.4701,2.45,5.4701,5.47s-2.4501,5.47-5.4701,5.47C1888.5601,2083.05,1886.11,2080.6001,1886.11,2077.5801z"/>
             </symbol>
-            
+
             <symbol id="line10_19-line11_23">
             <linearGradient id="line10_19_00000121242825947752907790000012986568142266594731_" gradientUnits="userSpaceOnUse" x1="1975.6" y1="-229.8502" x2="1975.6" y2="-205.8502" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#B5CC06"/>
 						<stop  offset="1" style="stop-color:#89CDCF"/>
 					</linearGradient>
-					
+
 						<circle id="line10_19" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line10_19_00000121242825947752907790000012986568142266594731_)" stroke-width="7" cx="1975.6" cy="2390.26" r="12"/>
             </symbol>
-            
+
             <symbol id="line10_19-lineD2_23">
             <g id="line10_19-lineD2_23">
 					<path id="Vector_313" fill="#ACACAC" d="M1990.4399,2404.8899c0.8301,0,1.5-0.6799,1.5-1.5c0-0.8298-0.6699-1.5-1.5-1.5
@@ -9854,7 +9854,7 @@
 					c1.8101,0,3.27-1.46,3.27-3.27S2003.67,2409.99,2001.86,2409.99z M1996.39,2413.26c0-3.02,2.45-5.47,5.47-5.47
 					s5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47S1996.39,2416.28,1996.39,2413.26z"/>
             </symbol>
-            
+
             <symbol id="line11_23-lineD2_23">
             <g id="line11_23-lineD2_23">
 					<path id="Vector_313" fill="#ACACAC" d="M1990.4399,2404.8899c0.8301,0,1.5-0.6799,1.5-1.5c0-0.8298-0.6699-1.5-1.5-1.5
@@ -9868,16 +9868,16 @@
 					c1.8101,0,3.27-1.46,3.27-3.27S2003.67,2409.99,2001.86,2409.99z M1996.39,2413.26c0-3.02,2.45-5.47,5.47-5.47
 					s5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47S1996.39,2416.28,1996.39,2413.26z"/>
             </symbol>
-                
+
             <symbol id="line11_5-line14_19">
             <linearGradient id="line11_5_00000086681401336309727750000006812351970023372723_" gradientUnits="userSpaceOnUse" x1="715" y1="-1096.1101" x2="715" y2="-1072.1101" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#D6191D"/>
 						<stop  offset="1" style="stop-color:#89CDCF"/>
 					</linearGradient>
-					
+
 						<circle id="line11_5" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line11_5_00000086681401336309727750000006812351970023372723_)" stroke-width="7" cx="715" cy="1524" r="12"/>
             </symbol>
-            
+
             <symbol id="line11_5-lineD1_19">
                 <g id="line11_5-lineD1_19">
 					<path id="Vector_299" fill="#ACACAC" d="M725.795,1510.78c0.067,0.8199,0.792,1.4399,1.617,1.37
@@ -9895,7 +9895,7 @@
 					C741.75,1494.63,740.286,1493.16,738.48,1493.16z M733.01,1496.4301c0-3.02,2.449-5.4701,5.47-5.4701s5.47,2.4501,5.47,5.4701
 					c0,3.0299-2.449,5.48-5.47,5.48S733.01,1499.46,733.01,1496.4301z"/>
             </symbol>
-            
+
             <symbol id="line14_19-lineD1_19">
                 <g id="line14_19-lineD1_19">
 					<path id="Vector_299" fill="#ACACAC" d="M725.795,1510.78c0.067,0.8199,0.792,1.4399,1.617,1.37
@@ -9916,25 +9916,25 @@
 					C741.75,1494.63,740.286,1493.16,738.48,1493.16z M733.01,1496.4301c0-3.02,2.449-5.4701,5.47-5.4701s5.47,2.4501,5.47,5.4701
 					c0,3.0299-2.449,5.48-5.47,5.48S733.01,1499.46,733.01,1496.4301z"/>
             </symbol>
-            
+
             <symbol id="line11_12-lineD4_22">
             <linearGradient id="lineD4_22_00000047042631446101969890000003923806790487592358_" gradientUnits="userSpaceOnUse" x1="669.997" y1="-464.2303" x2="669.997" y2="-440.2303" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#47B485"/>
 						<stop  offset="1" style="stop-color:#89CDCF"/>
 					</linearGradient>
-					
+
 						<circle id="lineD4_22" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#lineD4_22_00000047042631446101969890000003923806790487592358_)" stroke-width="7" cx="669.997" cy="2155.8799" r="12"/>
             </symbol>
-            
+
             <symbol id="line14_8-lineD2_21">
             <linearGradient id="line14_8_00000075874356385421275880000012302901172597677989_" gradientUnits="userSpaceOnUse" x1="2046" y1="-697.1102" x2="2046" y2="-673.9702" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#D6191D"/>
 						<stop  offset="1" style="stop-color:#E94483"/>
 					</linearGradient>
-					
+
 						<circle id="line14_8" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line14_8_00000075874356385421275880000012302901172597677989_)" stroke-width="5" cx="2046" cy="1923" r="12"/>
             </symbol>
-            
+
             <symbol id="line14_6-lineD3_18">
             <g id="line14_6-lineD3_18">
 					<path id="Vector_364" fill="#ACACAC" d="M2254.79,1699c0.8301,0,1.5-0.67,1.5-1.5s-0.6699-1.5-1.5-1.5s-1.5,0.67-1.5,1.5
@@ -9953,16 +9953,16 @@
 					c1.8098,0,3.27-1.46,3.27-3.27S2241.3999,1694.23,2239.5901,1694.23z M2234.1201,1697.5c0-3.02,2.45-5.47,5.47-5.47
 					s5.47,2.45,5.47,5.47s-2.45,5.47-5.47,5.47S2234.1201,1700.52,2234.1201,1697.5z"/>
             </symbol>
-            
+
             <symbol id="line14_26-lineD3_12">
             <linearGradient id="line14_26_00000124125170936026272880000011241151472205966756_" gradientUnits="userSpaceOnUse" x1="1141" y1="-1717.1101" x2="1141" y2="-1693.1101" gradientTransform="matrix(1 0 0 1 0 2608.1101)">
 						<stop  offset="0" style="stop-color:#EA5D0E"/>
 						<stop  offset="1" style="stop-color:#D6191D"/>
 					</linearGradient>
-					
+
 						<circle id="line14_26" fill="#F1F1F1" fill-opacity="0.01" stroke="url(#line14_26_00000124125170936026272880000011241151472205966756_)" stroke-width="5" cx="1141" cy="903" r="12"/>
             </symbol>
-            
+
             <symbol id="lineD3_19-lineD4_9">
             <g id="lineD3_19-lineD4_9">
 					<path id="Vector_411" fill="#ACACAC" d="M2309.4199,1748.16c0.8301,0,1.5-0.67,1.5-1.5c0-0.8301-0.6699-1.5-1.5-1.5
@@ -9991,7 +9991,7 @@
 					C2312.6899,1715.6899,2311.23,1714.22,2309.4199,1714.22z M2303.95,1717.5c0-3.03,2.45-5.48,5.47-5.48
 					c3.03,0,5.47,2.45,5.47,5.48c0,3.02-2.4399,5.47-5.47,5.47C2306.3999,1722.97,2303.95,1720.52,2303.95,1717.5z"/>
             </symbol>
-                
+
             <symbol id="lineD4_25-lineD4A_1">
                 <g id="transition-283">
 					<path id="Vector_474" fill="#ACACAC" d="M523,2348.5c0.828,0,1.5-0.6699,1.5-1.5s-0.672-1.5-1.5-1.5
@@ -10010,7 +10010,7 @@
 					c1.806,0,3.27-1.46,3.27-3.27S534.146,2354.4299,532.34,2354.4299z M526.87,2357.7c0-3.02,2.449-5.47,5.47-5.47
 					c3.021,0,5.47,2.45,5.47,5.47s-2.449,5.47-5.47,5.47C529.319,2363.1699,526.87,2360.72,526.87,2357.7z"/>
             </symbol>
-            
+
 
 
 
@@ -10038,9 +10038,9 @@
 
                 <circle id="line1_4" fill="#F1F1F1" fill-opacity="0.01" stroke="#D51317" stroke-width="7" cx="1829.0601" cy="1343.88" r="12"/>
                 <path id="lineD3_39" fill-rule="evenodd" clip-rule="evenodd" d="M1829.06 1278.23C1824.42 1278.23 1820.66 1281.99 1820.66 1286.63C1820.66 1291.27 1824.42 1295.03 1829.06 1295.03C1833.7 1295.03 1837.46 1291.27 1837.46 1286.63C1837.46 1281.99 1833.7 1278.23 1829.06 1278.23ZM1818.46 1286.63C1818.46 1280.77 1823.21 1276.03 1829.06 1276.03C1834.92 1276.03 1839.66 1280.77 1839.66 1286.63C1839.66 1292.48 1834.92 1297.23 1829.06 1297.23C1823.21 1297.23 1818.46 1292.48 1818.46 1286.63ZM1829.06 1283.36C1827.26 1283.36 1825.79 1284.82 1825.79 1286.63C1825.79 1288.43 1827.26 1289.9 1829.06 1289.9C1830.87 1289.9 1832.33 1288.43 1832.33 1286.63C1832.33 1284.82 1830.87 1283.36 1829.06 1283.36ZM1823.59 1286.63C1823.59 1283.61 1826.04 1281.16 1829.06 1281.16C1832.08 1281.16 1834.53 1283.61 1834.53 1286.63C1834.53 1289.65 1832.08 1292.1 1829.06 1292.1C1826.04 1292.1 1823.59 1289.65 1823.59 1286.63Z" fill="#EA5B0C"/>
-                
+
                  </symbol>
-            
+
                         <symbol id="line11_29-lineD3_39">
                 <g id="line11_29-lineD3_39">
 <path id="Vector_458" d="M1829.06 1321.9C1829.89 1321.9 1830.56 1321.22 1830.56 1320.4C1830.56 1319.57 1829.89 1318.9 1829.06 1318.9C1828.23 1318.9 1827.56 1319.57 1827.56 1320.4C1827.56 1321.22 1828.23 1321.9 1829.06 1321.9Z" fill="#ACACAC"/>
@@ -10053,7 +10053,7 @@
 
                 <circle id="line11_29" fill="#F1F1F1" fill-opacity="0.01" stroke="#88cdcf" stroke-width="7" cx="1829.0601" cy="1343.88" r="12"/>
                 <path id="lineD3_39" fill-rule="evenodd" clip-rule="evenodd" d="M1829.06 1278.23C1824.42 1278.23 1820.66 1281.99 1820.66 1286.63C1820.66 1291.27 1824.42 1295.03 1829.06 1295.03C1833.7 1295.03 1837.46 1291.27 1837.46 1286.63C1837.46 1281.99 1833.7 1278.23 1829.06 1278.23ZM1818.46 1286.63C1818.46 1280.77 1823.21 1276.03 1829.06 1276.03C1834.92 1276.03 1839.66 1280.77 1839.66 1286.63C1839.66 1292.48 1834.92 1297.23 1829.06 1297.23C1823.21 1297.23 1818.46 1292.48 1818.46 1286.63ZM1829.06 1283.36C1827.26 1283.36 1825.79 1284.82 1825.79 1286.63C1825.79 1288.43 1827.26 1289.9 1829.06 1289.9C1830.87 1289.9 1832.33 1288.43 1832.33 1286.63C1832.33 1284.82 1830.87 1283.36 1829.06 1283.36ZM1823.59 1286.63C1823.59 1283.61 1826.04 1281.16 1829.06 1281.16C1832.08 1281.16 1834.53 1283.61 1834.53 1286.63C1834.53 1289.65 1832.08 1292.1 1829.06 1292.1C1826.04 1292.1 1823.59 1289.65 1823.59 1286.63Z" fill="#EA5B0C"/>
-                
+
                  </symbol>
         </svg>
     </body>
