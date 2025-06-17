@@ -154,6 +154,7 @@
 <script>
 let currentLangIndex = 0;
 
+
 const stations = {
     'Бульвар Рокоссовского': ["Бульвар Рокоссовского", "Rokossovsky Boulevard", "罗科索夫斯基布儿瓦尔", "Рокоссовский бульвары"],
     'Черкизовская': ["Черкизовская", "Cherkizovskaya", "切尔基佐夫斯卡娅", "Черкизовская"],
@@ -269,7 +270,7 @@ const stations = {
     'Сухаревская': ["Сухаревская", "Sukharevskaya", "苏哈列夫斯卡娅", "Сухаревская"],
     'Тургеневская': ["Тургеневская", "Turgenevskaya", "屠格涅夫斯ка娅", "Тургеневская"],
     'Китай-город': ["Китай-город", "China Town", "基泰格罗德", "Китай-город"],
-    'Третьяковская': ["Третьяковская", "Tretyakovskaya", "特列基亚科夫斯ка娅", "Третьяковская"],
+    'Третьяковская': ["Третьяковская", "Tretyakovskaya", "特列季亞科夫斯卡婭", "Третьяковская"],
     'Октябрьская': ["Октябрьская", "Oktyabrskaya", "奥克佳勃斯卡娅", "Октябрьская"],
     'Шаболовская': ["Шаболовская", "Shabolovskaya", "沙波洛夫斯ка娅", "Шаболовская"],
     'Ленинский проспект': ["Ленинский проспект", "Leninskiy avenue", "列宁斯基 普罗斯别克特", "Ленин даңғылы"],
@@ -312,9 +313,9 @@ const stations = {
     'Перово': ["Перово", "Perovo", "别罗沃", "Перово"],
     'Шоссе Энтузиастов': ["Шоссе Энтузиастов", "Shosse Entuziastov", "绍赛 因图慈阿斯特夫", "Энтузиасты тас жолы"],
     'Авиамоторная': ["Авиамоторная", "Aviamotornaya", "阿维啊莫托尔纳亚", "Авиамоторная"],
-    'Площадь Ильича': ["Площадь Ильича", "Ilyich Square", "普洛夏基 Ильич", "Ильич алаңы"],
+    'Площадь Ильича': ["Площадь Ильича", "Ilyich Square", "伊里奇廣場", "Ильич алаңы"],
     'Марксистская': ["Марксистская", "Marksistskaya", "马尔克西斯卡娅", "Марксистская"],
-    'Третьяковская': ["Третьяковская", "Tretyakovskaya", "杰罗沃ий Центр", "Третьяковская"],
+    'Третьяковская': ["Третьяковская", "Tretyakovskaya", "特列季亞科夫斯卡婭", "Третьяковская"],
 
     'Деловой Центр': ["Деловой Центр", "Business Center", "杰罗沃Й Центр", "Деловой центр"],
     'Парк Победы': ["Парк Победы", "Victory Park", "怕克珀别得", "Победа саябағы"],
@@ -433,7 +434,7 @@ const stations = {
     'Нижегородская': ["Нижегородская", "Nizhegorodskaya", "尼热郭罗德斯卡娅", "Нижегородская"],
     'Новохохловская': ["Новохохловская", "Novokhokhlovskaya", "诺沃霍哈罗夫斯卡娅", "Новохохловская"],
     'Угрешская': ["Угрешская", "Ugreshskaya", "乌格雷斯卡娅", "Ýgreshskaıa"],
-    'Дубровка': ["Дубровка", "Dubrovka", "杜布罗夫ка", "Дубровка"],
+    'Дубровка': ["Дубровка", "Dubrovka", "杜布罗夫卡", "Дубровка"],
     'Автозаводская': ["Автозаводская", "Avtozavodskaya", "阿夫托扎沃德斯卡娅", "Автозаводская"],
     'ЗИЛ': ["ЗИЛ", "ZIL", "济勒", "ЗИЛ"],
     'Верхние Котлы': ["Верхние Котлы", "Upper Boilers", "维尔哈尼耶ка特乐", "Верхние Котлы"],
@@ -488,6 +489,7 @@ const stations = {
     'Савёловская': ["Савёловская", "Savyolovskaya", "萨维奥洛沃斯卡亚", "Савёловская"],
     'Белорусская': ["Белорусская", "Belorusskaya", "别拉鲁斯卡亚", "Белорусская"],
     'Беговая': ["Беговая", "Begovaya", "别郭瓦亚", "Беговая"],
+    'Тестовская': ["Тестовская", "Testovskaya", "特斯托夫斯卡婭", "Тестовская"],
     'Москва-Сити': ["Москва-Сити", "Moscow-City", "莫斯科城", "Мәскеу Қаласы"],
     'Фили': ["Фили", "Fili", "费利", "Фили"],
     'Славянский бульвар': ["Славянский бульвар", "Slavic Boulevard", "斯拉维扬斯基布儿瓦尔", "Славян бульвары"],
@@ -650,6 +652,11 @@ const stations = {
     ]
 };
 
+/**
+ * Получает оригинальный (ключевой) текст станции по переводу.
+ * @param {string} translatedText - Переведённый текст станции.
+ * @returns {string} Оригинальное имя станции или переданный текст, если не найдено совпадений.
+ */
 function getOriginalText(translatedText) {
     for (const key in stations) {
         const translations = stations[key];
@@ -660,6 +667,12 @@ function getOriginalText(translatedText) {
     return translatedText;
 }
 
+/**
+ * Переводит оригинальный текст на текущий язык.
+ * Поддерживает шаблоны с подстановкой {n}.
+ * @param {string} originalText - Оригинальный текст (ключ).
+ * @returns {string} Переведённый текст, если найден; иначе возвращает оригинал.
+ */
 function translateText(originalText) {
     const translation = stations[originalText];
     if (translation) {
@@ -681,6 +694,10 @@ function translateText(originalText) {
     return originalText;
 }
 
+/**
+ * Переводит элементы callout на текущий язык.
+ * Сохраняет оригинальный текст в `el._original` при первом вызове.
+ */
 function translateCalloutText() {
     const callout = document.querySelector('.callout');
     if (!callout) return;
@@ -698,10 +715,18 @@ function translateCalloutText() {
     });
 }
 
-// Функция смены языка
+/**
+ * Обработчик, запускающийся при полной загрузке DOM.
+ * Отвечает за перевод текста на странице при смене языка через селектор.
+ */
 document.addEventListener('DOMContentLoaded', function () {
     const languageSelector = document.getElementById('languageSelector');
 
+    /**
+     * Обновляет язык отображения текста на странице.
+     * Проходит по DOM-элементам и заменяет текст на соответствующий перевод.
+     * Сохраняет оригинальный текст элемента в свойство `_original`, чтобы не терять начальное значение.
+     */
     function changeLanguage() {
         currentLangIndex = languageSelector.selectedIndex;
         // console.log("changing language to index:", currentLangIndex);
@@ -724,6 +749,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
+        // Отдельная обработка для определённых HTML-элементов
         document.querySelectorAll("button, span, div, h1, h2, h3, h4, p, label").forEach(element => {
             if (element.children.length === 0 && element.textContent.trim() !== "") {
                 const currentText = element.textContent.trim();
@@ -741,6 +767,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
+        // Отдельная обработка SVG-текста
         document.querySelectorAll("text, tspan").forEach(element => {
             if (element.children.length === 0 && element.textContent.trim() !== "") {
                 if (!element._original) {
@@ -757,15 +784,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Назначаем обработчик смены языка
     languageSelector.addEventListener("change", changeLanguage);
 
+    // Инициируем начальную установку языка
     changeLanguage();
 })
 
-// Сохраняем оригинальные цвета всех элементов
+/**
+ * Хранилище для исходных цветов элементов SVG.
+ * Используется Map, где ключ — DOM-элемент, а значение — объект с fill и stroke.
+ * @type {Map<Element, {fill: string|null, stroke: string|null}>}
+ */
 const originalColors = new Map();
 
-// Функция для сохранения исходных цветов
+/**
+ * Сохраняет исходные значения атрибутов `fill` и `stroke` для всех SVG-элементов,
+ * находящихся в `.map__library > html > body > svg`.
+ * Это позволяет позже восстановить цвета, если они были изменены.
+ */
 function saveOriginalColors() {
     const librarySvg = document.querySelector('.map__library > html > body > svg');
     if (!librarySvg) return;
@@ -782,7 +819,12 @@ function saveOriginalColors() {
     });
 }
 
-// Функция для проверки и изменения цветов
+/**
+ * Проверяет текущий фон карты и меняет цвета элементов SVG в зависимости от него.
+ * — Если фон чёрный, то все элементы перекрашиваются в чёрный цвет.
+ * — Если фон стандартный — возвращаются сохранённые цвета.
+ * Также окрашивает блоки `departureImage` и `arrivalImage` в чёрный, если нужно.
+ */
 function checkMapBackground() {
     // Получаем div с id="map-background"
     const mapBackground = document.getElementById('map-background');
@@ -842,14 +884,33 @@ function checkMapBackground() {
 // Сохраняем исходные цвета при загрузке страницы
 saveOriginalColors();
 
+/**
+ * Запускает периодическую проверку карты:
+ * — сохраняет оригинальные цвета,
+ * — изменяет текущие цвета в зависимости от фона.
+ */
 setInterval(() => {
     saveOriginalColors(); // Обновляем данные о цветах
     checkMapBackground(); // Проверяем фон и красим
 }, 1000);
 
+/**
+ * Хэш последнего отрисованного маршрута (для избежания повторной отрисовки).
+ * @type {string|null}
+ */
 let lastRouteHash = null;
+
+/**
+ * Индекс последнего выбранного языка (для отслеживания изменений языка).
+ * @type {number|null}
+ */
 let lastLangIndex = null;
 
+/**
+ * Проверяет, загружены ли данные маршрута и требуется ли перерисовка маршрута.
+ * Если маршрут изменился или сменился язык, а также активен нужный класс,
+ * то вызывается функция `Rar()` с актуализированными данными.
+ */
 function checkAndRunRar() {
     if (!window.routeData || window.routeData.length === 0) {
         console.warn('❗ routeData ещё не загружен, ждем...');
@@ -875,6 +936,13 @@ function checkAndRunRar() {
     }
 }
 
+/**
+ * Создаёт глубокую копию маршрута и ищет первые две станции с ненулевыми названиями.
+ * Пока не производит дополнительных манипуляций с цветами, но зарезервирован для этого.
+ *
+ * @param {Array<Object>} routeData - Список точек маршрута (объекты со свойствами, включая `name`)
+ * @returns {Array<Object>} - Копия маршрута без изменений
+ */
 function fixColors(routeData) {
     let newRouteData = JSON.parse(JSON.stringify(routeData));
 
@@ -894,6 +962,14 @@ function fixColors(routeData) {
     return newRouteData;
 }
 
+/**
+ * Основная функция для визуализации маршрута на SVG-карте.
+ * Отрисовывает станции, соединительные линии (в т.ч. градиентные и пунктирные),
+ * текстовые метки, а также обрабатывает коллизии и всплывающие окна для скрытых групп станций.
+ *
+ * @param {Array<Object>} routeData - Массив объектов маршрута, включающий станции и линии.
+ * @param {Array<Object>|null} existingGroups - Массив уже созданных групп станций (если повторный рендер), или null при первом вызове.
+ */
 function Rar(routeData, existingGroups = null) {
 
     if (!routeData) {
@@ -926,9 +1002,13 @@ function Rar(routeData, existingGroups = null) {
     const totalWidth = pipWidth - (pipWidth * 0.1);
 
     const stations = routeData.filter(item => item.type === 'station');
-    const lines = routeData.filter(item => item.type === 'line');
-    const spacing = stations.length > 1 ? totalWidth / (stations.length - 1) : 0;
 
+    /**
+    * Отрисовывает станцию в виде круга.
+    * @param {number} cx - Координата X.
+    * @param {number} cy - Координата Y.
+    * @param {string} fill - Цвет заливки.
+    */
     function drawCircle(cx, cy, fill) {
         const circle = document.createElementNS(svgNS, 'circle');
         circle.setAttribute('cx', cx);
@@ -939,6 +1019,12 @@ function Rar(routeData, existingGroups = null) {
         svg.appendChild(circle);
     }
 
+    /**
+     * Отрисовывает текст названия станции с автоматическим переносом строк.
+     * @param {number} cx - Центр X.
+     * @param {number} cy - Центр Y.
+     * @param {string} textContent - Исходный текст (ключ станции).
+     */
     function drawText(cx, cy, textContent) {
         const MAX_LENGTH = (currentLangIndex === 2) ? 8 : 16;
         const words = translateText(textContent).split(" ");
@@ -1039,7 +1125,16 @@ function Rar(routeData, existingGroups = null) {
         }
     }
 
-
+    /**
+     * Отрисовывает линию между станциями (сплошную, пунктирную или градиентную).
+     * @param {number} x1
+     * @param {number} y1
+     * @param {number} x2
+     * @param {number} y2
+     * @param {string} strokeColor - Цвет линии или url-путь к градиенту.
+     * @param {string} startColor - Цвет начала градиента.
+     * @param {string} endColor - Цвет конца градиента.
+     */
     function drawLine(x1, y1, x2, y2, strokeColor, startColor, endColor) {
         const line = document.createElementNS(svgNS, "line");
         line.setAttribute("x1", x1);
@@ -1061,6 +1156,14 @@ function Rar(routeData, existingGroups = null) {
         svg.appendChild(line);
     }
 
+    /**
+     * Отрисовывает пунктирную линию между станциями.
+     * @param {number} x1
+     * @param {number} y1
+     * @param {number} x2
+     * @param {number} y2
+     * @param {string} color - Цвет точек.
+     */
     function drawDottedLine(x1, y1, x2, y2, color) {
         const segmentSpacing = Math.max(12, pipWidth * 0.002); // 8px диаметр + 8px отступ = 16px между центрами точек
         const radius = Math.max(4, pipWidth * 0.001); // Радиус точки (диаметр 8px)
@@ -1097,7 +1200,17 @@ function Rar(routeData, existingGroups = null) {
         }
     }
 
-
+    /**
+     * Рисует отрезок градиентной линии между двумя точками.
+     *
+     * @param {number} x1 - Координата X начала.
+     * @param {number} y1 - Координата Y начала.
+     * @param {number} x2 - Координата X конца.
+     * @param {number} y2 - Координата Y конца.
+     * @param {string} startColor - Начальный цвет (hex, например "#FF0000").
+     * @param {string} endColor - Конечный цвет (hex, например "#00FF00").
+     * @param {number} [segments=50] - Количество отрезков для градиента.
+     */
     function drawGradientLine(x1, y1, x2, y2, startColor, endColor, segments = 50) {
         let svgNS = "http://www.w3.org/2000/svg";
 
@@ -1136,6 +1249,10 @@ function Rar(routeData, existingGroups = null) {
         }
     }
 
+    /**
+     * Группирует станции по одинаковому цвету, чтобы затем сделать коллапс (сворачивание).
+     * Используется при отрисовке маршрута.
+     */
     let groupedStations = [];
     let currentGroup = [];
 
@@ -1155,7 +1272,15 @@ function Rar(routeData, existingGroups = null) {
         groupedStations.push(currentGroup);
     }
 
+    /**
+     * Формирует список всех важных станций — одиночные или крайние из группы.
+     */
     const importantStations = [];
+
+    /**
+     * Массив групп станций, которые можно свернуть.
+     * Если переданы внешние (например, при повторной отрисовке), они переиспользуются.
+     */
     let collapsibleGroups = existingGroups || [];
 
     groupedStations.forEach(group => {
@@ -1175,6 +1300,10 @@ function Rar(routeData, existingGroups = null) {
         }
     });
 
+    /**
+     * Список станций, которые реально будут отображаться.
+     * Например, при свёрнутых группах — только крайние.
+     */
     let visibleStations = [];
     groupedStations.forEach(group => {
         if (group.length === 1) {
@@ -1189,6 +1318,10 @@ function Rar(routeData, existingGroups = null) {
         }
     })
 
+    /**
+     * Для каждой отображаемой станции рассчитываются координаты.
+     * Эти координаты используются для размещения кругов, текста и линий.
+     */
     const stationCoords = visibleStations.map((station, index) => {
         // console.log("visibleStations:", visibleStations.map(s => s.id));
         return {
@@ -1205,6 +1338,15 @@ function Rar(routeData, existingGroups = null) {
         drawText(station.x, station.y, station.name);
     });
 
+    /**
+     * Отрисовывает круг (станция), текст рядом с ней и соединительные линии между ними.
+     * Для линий поддерживается обычная, градиентная и пунктирная отрисовка.
+     */
+
+    /**
+     * Сопоставление свёрнутых групп по ключу "startId-endId".
+     * Нужно, чтобы понять — является ли отрезок свёрнутым и показать подсказку.
+     */
     const collapsedGroupMap = new Map();
     collapsibleGroups.forEach(group => {
         if (group.collapsed) {
@@ -1239,6 +1381,25 @@ function Rar(routeData, existingGroups = null) {
 
         // console.log("Пробуем найти линию между", startStation.id, "и", endStation.id, "=>", lineItem);
 
+        /**
+         * Для каждой пары видимых станций:
+         * - находим lineItem (данные линии)
+         * - проверяем, свёрнута ли группа между ними
+         * - рисуем линию (обычную, градиентную или пунктирную)
+         * - если линия между свёрнутыми станциями — добавляется интерактивная подсказка
+         *   (с возможностью открыть popup со списком скрытых станций).
+         */
+
+        /**
+         * Вспомогательная функция для показа/скрытия popup'а со скрытыми станциями между точками.
+         *
+         * @param {Object} startStation - Координаты первой станции.
+         * @param {Object} endStation - Координаты второй станции.
+         * @param {Object} group - Данные группы (start, end, middle[]).
+         * @param {number} midX - Координата X центра между станциями.
+         * @param {number} startY - Базовая координата Y.
+         * @param {SVGForeignObjectElement} hintText - Элемент-подсказка, который скрывается при открытии popup.
+         */
         function togglePopup(startStation, endStation, group, midX, startY, hintText) {
             const popupId = `popup-${startStation.id}-${endStation.id}`;
             const existingList = document.getElementById(popupId);
@@ -1450,6 +1611,10 @@ function Rar(routeData, existingGroups = null) {
         }
     }
 
+    /**
+     * Если группа не свёрнута — рисуем прозрачную кнопку,
+     * по нажатию на которую пересоздаём маршрут с раскрытием группы.
+     */
     for (let group of collapsibleGroups) {
         const start = stationCoords.find(s => s.id === group.start.id);
         const end = stationCoords.find(s => s.id === group.end.id);
@@ -1474,557 +1639,560 @@ function Rar(routeData, existingGroups = null) {
         }
     }
 
+    /**
+     * Вставляем итоговый SVG в контейнер и запускаем логику для избежания наложений текста.
+     */
     document.getElementById('pip').appendChild(svg);
     adjustTextCollisions();
 }
 
-var metroLines  = [
-    {
-        'line': 'Сокольническая линия',
-        'color': 'cf2028',
-        'stations': [
-            { stations: ['Бульвар Рокоссовского', 'Черкизовская'], time: 2 },
-            { stations: ['Черкизовская', 'Преображенская площадь'], time: 3 },
-            { stations: ['Преображенская площадь', 'Сокольники'], time: 3 },
-            { stations: ['Сокольники', 'Красносельская'], time: 1 },
-            { stations: ['Красносельская', 'Комсомольская'], time: 1 },
-            { stations: ['Комсомольская', 'Красные ворота'], time: 1 },
-            { stations: ['Красные ворота', 'Чистые пруды'], time: 1 },
-            { stations: ['Чистые пруды', 'Лубянка'], time: 1 },
-            { stations: ['Лубянка', 'Охотный ряд'], time: 1 },
-            { stations: ['Охотный ряд', 'Библиотека имени Ленина'], time: 1 },
-            { stations: ['Библиотека имени Ленина', 'Кропоткинская'], time: 1 },
-            { stations: ['Кропоткинская', 'Парк культуры'], time: 2 },
-            { stations: ['Парк культуры', 'Фрунзенская'], time: 2 },
-            { stations: ['Фрунзенская', 'Спортивная'], time: 1 },
-            { stations: ['Спортивная', 'Воробьёвы горы'], time: 3 },
-            { stations: ['Воробьёвы горы', 'Университет'], time: 4 },
-            { stations: ['Университет', 'Проспект Вернадского'], time: 2 },
-            { stations: ['Проспект Вернадского', 'Юго-Западная'], time: 2 },
-            { stations: ['Юго-Западная', 'Тропарёво'], time: 3 },
-            { stations: ['Тропарёво', 'Румянцево'], time: 3 },
-            { stations: ['Румянцево', 'Саларьево'], time: 3 },
-            { stations: ['Саларьево', 'Филатов Луг'], time: 3 },
-            { stations: ['Филатов Луг', 'Прокшино'], time: 2 },
-            { stations: ['Прокшино', 'Ольховая'], time: 3 },
-            { stations: ['Ольховая', 'Коммунарка'], time: 1 }
-        ]
-    },
-    {
-        'line': 'Замоскворецкая линия',
-        'color': '13703a',
-        'stations': [
-            { stations: ['Алма-Атинская', 'Красногвардейская'], time: 4 },
-            { stations: ['Красногвардейская', 'Домодедовская'], time: 2 },
-            { stations: ['Домодедовская', 'Орехово'], time: 2 },
-            { stations: ['Орехово', 'Царицыно'], time: 2 },
-            { stations: ['Царицыно', 'Кантемировская'], time: 2 },
-            { stations: ['Кантемировская', 'Каширская'], time: 3 },
-            { stations: ['Каширская', 'Коломенская'], time: 3 },
-            { stations: ['Коломенская', 'Технопарк'], time: 2 },
-            { stations: ['Технопарк', 'Автозаводская'], time: 2 },
-            { stations: ['Автозаводская', 'Павелецкая'], time: 3 },
-            { stations: ['Павелецкая', 'Новокузнецкая'], time: 2 },
-            { stations: ['Новокузнецкая', 'Театральная'], time: 2 },
-            { stations: ['Театральная', 'Тверская'], time: 2 },
-            { stations: ['Тверская', 'Маяковская'], time: 1 },
-            { stations: ['Маяковская', 'Белорусская'], time: 2 },
-            { stations: ['Белорусская', 'Динамо'], time: 2 },
-            { stations: ['Динамо', 'Аэропорт'], time: 2 },
-            { stations: ['Аэропорт', 'Сокол'], time: 2 },
-            { stations: ['Сокол', 'Войковская'], time: 2 },
-            { stations: ['Войковская', 'Водный стадион'], time: 3 },
-            { stations: ['Водный стадион', 'Речной вокзал'], time: 2 },
-            { stations: ['Речной вокзал', 'Беломорская'], time: 1 },
-            { stations: ['Беломорская', 'Ховрино'], time: 2 }
-        ]
-    },
-    {
-        'line': 'Арбатско-Покровская линия',
-        'color': '283981',
-        'stations': [
-            { stations: ['Щёлковская', 'Первомайская'], time: 2 },
-            { stations: ['Первомайская', 'Измайловская'], time: 3 },
-            { stations: ['Измайловская', 'Партизанская'], time: 3 },
-            { stations: ['Партизанская', 'Семёновская'], time: 2 },
-            { stations: ['Семёновская', 'Электрозаводская'], time: 1 },
-            { stations: ['Электрозаводская', 'Бауманская'], time: 2 },
-            { stations: ['Бауманская', 'Курская'], time: 7 },
-            { stations: ['Курская', 'Площадь Революции'], time: 3 },
-            { stations: ['Площадь Революции', 'Арбатская'], time: 2 },
-            { stations: ['Арбатская', 'Смоленская'], time: 2 },
-            { stations: ['Смоленская', 'Киевская'], time: 5 },
-            { stations: ['Киевская', 'Парк Победы'], time: 8 },
-            { stations: ['Парк Победы', 'Славянский бульвар'], time: 4 },
-            { stations: ['Славянский бульвар', 'Кунцевская'], time: 2 },
-            { stations: ['Кунцевская', 'Молодёжная'], time: 3 },
-            { stations: ['Молодёжная', 'Крылатское'], time: 2 },
-            { stations: ['Крылатское', 'Строгино'], time: 8 },
-            { stations: ['Строгино', 'Мякинино'], time: 3 },
-            { stations: ['Мякинино', 'Волоколамская'], time:  2},
-            { stations: ['Волоколамская', 'Митино'], time: 3 },
-            { stations: ['Митино', 'Пятницкое шоссе'], time: 3 }
-        ]
-    },
-    {
-        'line': 'Филёвская линия',
-        'color': '19a2dc',
-        'stations': [
-            { stations: ['Кунцевская', 'Пионерская'], time: 1 },
-            { stations: ['Пионерская', 'Филевский парк'], time: 2 },
-            { stations: ['Филевский парк', 'Багратионовская'], time: 1 },
-            { stations: ['Багратионовская', 'Фили'], time: 2 },
-            { stations: ['Фили', 'Кутузовская'], time: 2 },
-            { stations: ['Кутузовская', 'Студенческая'], time:  2},
-            { stations: ['Студенческая', 'Киевская'], time: 2 },
-            { stations: ['Киевская', 'Площадь Смоленская'], time: 2 },
-            { stations: ['Площадь Смоленская', 'Арбатская'], time: 2 },
-            { stations: ['Арбатская', 'Александровский сад'], time: 1 }
-        ]
-    },
-    {
-    'line': 'Кольцевая линия',
-    'color': '8a3127',
-    'stations': [
-        { stations: ['Парк культуры', 'Октябрьская'], time: 2 },
-        { stations: ['Октябрьская', 'Добрынинская'], time: 2 },
-        { stations: ['Добрынинская', 'Павелецкая'], time: 1 },
-        { stations: ['Павелецкая', 'Таганская'], time: 1 },
-        { stations: ['Таганская', 'Курская'], time: 2 },
-        { stations: ['Курская', 'Комсомольская'], time: 2 },
-        { stations: ['Комсомольская', 'Проспект Мира'], time: 2 },
-        { stations: ['Проспект Мира', 'Новослободская'], time: 2 },
-        { stations: ['Новослободская', 'Белорусская'], time: 2 },
-        { stations: ['Белорусская', 'Краснопресненская'], time: 2 },
-        { stations: ['Краснопресненская', 'Киевская'], time: 2 },
-        { stations: ['Киевская', 'Парк культуры'], time: 2 }
-        ]
-    },
-        {
-        'line': 'Калужско-Рижская линия',
-        'color': 'f78e38',
-        'stations': [
-            { stations: ['Медведково', 'Бабушкинская'], time: 3 },
-            { stations: ['Бабушкинская', 'Свиблово'], time: 2 },
-            { stations: ['Свиблово', 'Ботанический сад'], time: 2 },
-            { stations: ['Ботанический сад', 'ВДНХ'], time: 3 },
-            { stations: ['ВДНХ', 'Алексеевская'], time: 2 },
-            { stations: ['Алексеевская', 'Рижская'], time: 2 },
-            { stations: ['Рижская', 'Проспект Мира'], time: 2 },
-            { stations: ['Проспект Мира', 'Сухаревская'], time: 2 },
-            { stations: ['Сухаревская', 'Тургеневская'], time: 1 },
-            { stations: ['Тургеневская', 'Китай-город'], time: 2 },
-            { stations: ['Китай-город', 'Третьяковская'], time: 2 },
-            { stations: ['Третьяковская', 'Октябрьская'], time: 2 },
-            { stations: ['Октябрьская', 'Шаболовская'], time: 2 },
-            { stations: ['Шаболовская', 'Ленинский проспект'], time: 2 },
-            { stations: ['Ленинский проспект', 'Академическая'], time: 2 },
-            { stations: ['Академическая', 'Профсоюзная'], time: 2 },
-            { stations: ['Профсоюзная', 'Новые Черёмушки'], time: 2 },
-            { stations: ['Новые Черёмушки', 'Калужская'], time: 2 },
-            { stations: ['Калужская', 'Беляево'], time: 3 },
-            { stations: ['Беляево', 'Коньково'], time: 2 },
-            { stations: ['Коньково', 'Тёплый стан'], time: 3 },
-            { stations: ['Тёплый стан', 'Ясенево'], time: 3 },
-            { stations: ['Ясенево', 'Новоясеневская'], time: 2 }
-        ]
-    },
-    {
-        'line': 'Таганско-Краснопресненская линия',
-        'color': 'a35d94',
-        'stations': [
-            { stations: ['Планерная', 'Сходненская'], time: 1 },
-            { stations: ['Сходненская', 'Тушинская'], time: 3 },
-            { stations: ['Тушинская', 'Спартак'], time: 1 },
-            { stations: ['Спартак', 'Щукинская'], time: 3 },
-            { stations: ['Щукинская', 'Октябрьское поле'], time:  3},
-            { stations: ['Октябрьское поле', 'Полежаевская'], time: 3 },
-            { stations: ['Полежаевская', 'Беговая'], time: 2 },
-            { stations: ['Беговая', 'Улица 1905 года'], time: 2 },
-            { stations: ['Улица 1905 года', 'Баррикадная'], time: 2 },
-            { stations: ['Баррикадная', 'Пушкинская'], time: 2 },
-            { stations: ['Пушкинская', 'Кузнецкий мост'], time: 1 },
-            { stations: ['Кузнецкий мост', 'Китай-город'], time: 1 },
-            { stations: ['Китай-город', 'Таганская'], time: 2 },
-            { stations: ['Таганская', 'Пролетарская'], time: 2 },
-            { stations: ['Пролетарская', 'Волгоградский проспект'], time: 2 },
-            { stations: ['Волгоградский проспект', 'Текстильщики'], time: 4 },
-            { stations: ['Текстильщики', 'Кузьминки'], time: 2 },
-            { stations: ['Кузьминки', 'Рязанский проспект'], time: 3 },
-            { stations: ['Рязанский проспект', 'Выхино'], time: 2 },
-            { stations: ['Выхино', 'Лермонтовский проспект'], time: 4 },
-            { stations: ['Лермонтовский проспект', 'Жулебино'], time: 2 },
-            { stations: ['Жулебино', 'Котельники'], time: 2 }
-        ]
-    },
-    {
-        'line': 'Калининская линия',
-        'color': 'fde34f',
-        'stations': [
-            { stations: ['Новокосино', 'Новогиреево'], time: 4 },
-            { stations: ['Новогиреево', 'Перово'], time: 2 },
-            { stations: ['Перово', 'Шоссе Энтузиастов'], time: 3 },
-            { stations: ['Шоссе Энтузиастов', 'Авиамоторная'], time: 2 },
-            { stations: ['Авиамоторная', 'Площадь Ильича'], time: 3 },
-            { stations: ['Площадь Ильича', 'Марксистская'], time: 2 },
-            { stations: ['Марксистская', 'Третьяковская'], time: 2 },
-        ]
-    },
-    {
-        'line': 'Солнцевская',
-        'color': 'fde34f',
-        'stations': [
-            { stations: ['Деловой центр', 'Парк Победы'], time: 4 },
-            { stations: ['Парк Победы', 'Минская'], time: 3 },
-            { stations: ['Минская', 'Ломоносовский проспект'], time: 3 },
-            { stations: ['Ломоносовский проспект', 'Раменки'], time: 2 },
-            { stations: ['Раменки', 'Мичуринский проспект'], time: 1 },
-            { stations: ['Мичуринский проспект', 'Озёрная'], time: 3 },
-            { stations: ['Озёрная', 'Говорово'], time: 2 },
-            { stations: ['Говорово', 'Солнцево'], time: 2 },
-            { stations: ['Солнцево', 'Боровское шоссе'], time: 3 },
-            { stations: ['Боровское шоссе', 'Новопеределкино'], time: 2 },
-            { stations: ['Новопеределкино', 'Рассказовка'], time: 1 },
-            { stations: ['Рассказовка', 'Пыхтино'], time: 2 },
-            { stations: ['Пыхтино', 'Аэропорт Внуково'], time: 3 }
-        ]
-    },
-    {
-        'line': 'Серпуховско-Тимирязевская линия',
-        'color': 'abaeba',
-        'stations': [
-            { stations: ['Алтуфьево', 'Бибирево'], time: 3 },
-            { stations: ['Бибирево', 'Отрадное'], time: 3 },
-            { stations: ['Отрадное', 'Владыкино'], time: 2 },
-            { stations: ['Владыкино', 'Петровско-Разумовская'], time: 2 },
-            { stations: ['Петровско-Разумовская', 'Тимирязевская'], time: 3 },
-            { stations: ['Тимирязевская', 'Дмитровская'], time: 1 },
-            { stations: ['Дмитровская', 'Савёловская'], time: 2 },
-            { stations: ['Савёловская', 'Менделеевская'], time: 2 },
-            { stations: ['Менделеевская', 'Цветной бульвар'], time: 2 },
-            { stations: ['Цветной бульвар', 'Чеховская'], time: 1 },
-            { stations: ['Чеховская', 'Боровицкая'], time: 2 },
-            { stations: ['Боровицкая', 'Полянка'], time: 2 },
-            { stations: ['Полянка', 'Серпуховская'], time: 2 },
-            { stations: ['Серпуховская', 'Тульская'], time: 3 },
-            { stations: ['Тульская', 'Нагатинская'], time: 4 },
-            { stations: ['Нагатинская', 'Нагорная'], time: 2 },
-            { stations: ['Нагорная', 'Нахимовский проспект'], time: 1 },
-            { stations: ['Нахимовский проспект', 'Севастопольская'], time: 1 },
-            { stations: ['Севастопольская', 'Чертановская'], time: 2 },
-            { stations: ['Чертановская', 'Южная'], time: 3 },
-            { stations: ['Южная', 'Пражская'], time: 1 },
-            { stations: ['Пражская', 'Улица академика Янгеля'], time: 2 },
-            { stations: ['Улица академика Янгеля', 'Аннино'], time: 2 },
-            { stations: ['Аннино', 'Бульвар Дмитрия Донского'], time: 2 }
-        ]
-    },
-    {
-        'line': 'Люблинско-Дмитровская линия',
-        'color': 'aad16e',
-        'stations': [
-            { stations: ['Физтех', 'Лианозово'], time: 3 },
-            { stations: ['Лианозово', 'Яхромская'], time: 2 },
-            { stations: ['Яхромская', 'Селигерская'], time: 2 },
-            { stations: ['Селигерская', 'Верхние Лихоборы'], time: 1 },
-            { stations: ['Верхние Лихоборы', 'Окружная'], time: 1 },
-            { stations: ['Окружная', 'Петровско-Разумовская'], time: 1 },
-            { stations: ['Петровско-Разумовская', 'Фонвизинская'], time: 4 },
-            { stations: ['Фонвизинская', 'Бутырская'], time: 2 },
-            { stations: ['Бутырская', 'Марьина роща'], time: 3 },
-            { stations: ['Марьина роща', 'Достоевская'], time: 3 },
-            { stations: ['Достоевская', 'Трубная'], time: 2 },
-            { stations: ['Трубная', 'Сретенский бульвар'], time: 2 },
-            { stations: ['Сретенский бульвар', 'Чкаловская'], time: 2 },
-            { stations: ['Чкаловская', 'Римская'], time: 2 },
-            { stations: ['Римская', 'Крестьянская застава'], time: 2 },
-            { stations: ['Крестьянская застава', 'Дубровка'], time: 2 },
-            { stations: ['Дубровка', 'Кожуховская'], time: 2 },
-            { stations: ['Кожуховская', 'Печатники'], time: 3 },
-            { stations: ['Печатники', 'Волжская'], time: 2 },
-            { stations: ['Волжская', 'Люблино'], time: 2 },
-            { stations: ['Люблино', 'Братиславская'], time: 2 },
-            { stations: ['Братиславская', 'Марьино'], time: 1 },
-            { stations: ['Марьино', 'Борисово'], time: 3 },
-            { stations: ['Борисово', 'Шипиловская'], time: 3 },
-            { stations: ['Шипиловская', 'Зябликово'], time: 3 }
-        ]
-    },
-    {
-        'line': 'Большая кольцевая',
-        'color': '1cb2a7',
-        'stations': [
-            { stations: ['Народное Ополчение', 'Мнёвники'], time: 3 },
-            { stations: ['Мнёвники', 'Терехово'], time: 2 },
-            { stations: ['Терехово', 'Кунцевская'], time: 3 },
-            { stations: ['Кунцевская', 'Давыдково'], time: 2 },
-            { stations: ['Давыдково', 'Аминьевская'], time: 3 },
-            { stations: ['Аминьевская', 'Мичуринский проспект'], time: 2 },
-            { stations: ['Мичуринский проспект', 'Проспект Вернадского'], time: 2 },
-            { stations: ['Проспект Вернадского', 'Новаторская'], time: 2 },
-            { stations: ['Новаторская', 'Воронцовская'], time: 2 },
-            { stations: ['Воронцовская', 'Зюзино'], time: 3 },
-            { stations: ['Зюзино', 'Каховская'], time: 2 },
-            { stations: ['Каховская', 'Варшавская'], time: 2 },
-            { stations: ['Варшавская', 'Каширская'], time: 3 },
-            { stations: ['Каширская', 'Кленовый бульвар'], time: 4 },
-            { stations: ['Кленовый бульвар', 'Нагатинский затон'], time: 2 },
-            { stations: ['Нагатинский затон', 'Печатники'], time: 2 },
-            { stations: ['Печатники', 'Текстильщики'], time: 2 },
-            { stations: ['Текстильщики', 'Нижегородская'], time: 4 },
-            { stations: ['Нижегородская', 'Авиамоторная'], time: 4 },
-            { stations: ['Авиамоторная', 'Лефортово'], time: 2 },
-            { stations: ['Лефортово', 'Электрозаводская'], time: 2 },
-            { stations: ['Электрозаводская', 'Сокольники'], time: 3 },
-            { stations: ['Сокольники', 'Рижская'], time: 4 },
-            { stations: ['Рижская', 'Марьина Роща'], time: 2 },
-            { stations: ['Марьина Роща', 'Савёловская'], time: 3 },
-            { stations: ['Савёловская', 'Петровский парк'], time: 3 },
-            { stations: ['Петровский парк', 'ЦСКА'], time: 2 },
-            { stations: ['ЦСКА', 'Хорошёвская'], time: 2 }
-        ]
-    },
-    {
-        'line': 'Бутовская линия',
-        'color': '8ec9ea',
-        'stations': [
-            { stations: ['Битцевский парк', 'Лесопарковая'], time: 3 },
-            { stations: ['Лесопарковая', 'Улица Старокачаловская'], time: 3 },
-            { stations: ['Улица Старокачаловская', 'Улица Скобелевская'], time: 5 },
-            { stations: ['Улица Скобелевская', 'Бульвар адмирала Ушакова'], time: 1 },
-            { stations: ['Бульвар адмирала Ушакова', 'Улица Горчакова'], time: 2 },
-            { stations: ['Улица Горчакова', 'Бунинская аллея'], time: 2 }
-        ]
-    },
-    {
-        'line': 'Московский монорельс',
-        'color': 'd68ab1',
-        'stations': [
-            { stations: ['Тимирязевская', 'Улица Милашенкова'], time: 2 },
-            { stations: ['Улица Милашенкова', 'Телецентр'], time: 2 },
-            { stations: ['Телецентр', 'Улица Академика Королёва'], time: 2 },
-            { stations: ['Улица Академика Королёва', 'Выставочный центр'], time: 2 },
-            { stations: ['Выставочный центр', 'Улица Сергея Эйзенштейна'], time: 2 }
-        ]
-    },
-    {
-        'line': 'Московское центральное кольцо',
-        'color': 'd68ab1',
-        'stations': [
-            { stations: ['Окружная', 'Владыкино'], time: 2 },
-            { stations: ['Владыкино', 'Ботанический сад'], time: 2 },
-            { stations: ['Ботанический сад', 'Ростокино'], time: 2 },
-            { stations: ['Ростокино', 'Белокаменная'], time: 2 },
-            { stations: ['Белокаменная', 'Бульвар Рокоссовского'], time: 2 },
-            { stations: ['Бульвар Рокоссовского', 'Локомотив'], time: 1 },
-            { stations: ['Локомотив', 'Измайлово'], time: 2 },
-            { stations: ['Измайлово', 'Соколиная Гора'], time: 3 },
-            { stations: ['Соколиная Гора', 'Шоссе Энтузиастов'], time: 2 },
-            { stations: ['Шоссе Энтузиастов', 'Андроновка'], time: 3 },
-            { stations: ['Андроновка', 'Нижегородская'], time: 2 },
-            { stations: ['Нижегородская', 'Новохохловская'], time: 2 },
-            { stations: ['Новохохловская', 'Угрешская'], time: 4 },
-            { stations: ['Угрешская', 'Дубровка'], time: 3 },
-            { stations: ['Дубровка', 'Автозаводская'], time: 1 },
-            { stations: ['Автозаводская', 'ЗИЛ'], time: 1 },
-            { stations: ['ЗИЛ', 'Верхние Котлы'], time: 2 },
-            { stations: ['Верхние Котлы', 'Крымская'], time: 2 },
-            { stations: ['Крымская', 'Площадь Гагарина'], time: 2 },
-            { stations: ['Площадь Гагарина', 'Лужники'], time: 2 },
-            { stations: ['Лужники', 'Кутузовская'], time: 5 },
-            { stations: ['Кутузовская', 'Москва-Сити'], time: 2 },
-            { stations: ['Москва-Сити', 'Шелепиха'], time: 1 },
-            { stations: ['Шелепиха', 'Хорошёво'], time: 2 },
-            { stations: ['Хорошёво', 'Зорге'], time: 1 },
-            { stations: ['Зорге', 'Панфиловская'], time: 2 },
-            { stations: ['Панфиловская', 'Стрешнево'], time: 1 },
-            { stations: ['Стрешнево', 'Балтийская'], time: 3 },
-            { stations: ['Балтийская', 'Коптево'], time: 2 },
-            { stations: ['Коптево', 'Лихоборы'], time: 2 }
-        ]
-    },
-    {
-        'line': 'Некрасовская линия',
-        'color': 'd68ab1',
-        'stations': [
-            { stations: ['Нижегородская', 'Стахановская'], time: 2 },
-            { stations: ['Стахановская', 'Окская'], time: 2 },
-            { stations: ['Окская', 'Юго-Восточная'], time: 3 },
-            { stations: ['Юго-Восточная', 'Косино'], time: 3 },
-            { stations: ['Косино', 'Улица Дмитриевского'], time: 3 },
-            { stations: ['Улица Дмитриевского', 'Лухмановская'], time: 2 },
-            { stations: ['Лухмановская', 'Некрасовка'], time: 2 }
-        ]
-    },
-    {
-        'line': 'Троицкая линия',
-        'color': 'd68ab1',
-        'stations': [
-            { stations: ['Новаторская', 'Университет дружбы народов'], time: 3 },
-            { stations: ['Университет дружбы народов', 'Генерала Тюленева'], time: 2 },
-            { stations: ['Генерала Тюленева', 'Тютчевская'], time: 3 },
-        ]
-    },
-    {
-        'line': 'Белорусско-Савёловский диаметр',
-        'color': 'd68ab1',
-        'stations': [
-            { stations: ['Одинцово', 'Баковка'], time: 5 },
-            { stations: ['Баковка', 'Сколково'], time: 3 },
-            { stations: ['Сколково', 'Немчиновка'], time: 3 },
-            { stations: ['Немчиновка', 'Сетунь'], time: 3 },
-            { stations: ['Сетунь', 'Рабочий Посёлок'], time: 2 },
-            { stations: ['Рабочий Посёлок', 'Кунцевская'], time: 2 },
-            { stations: ['Кунцевская', 'Славянский бульвар'], time: 3 },
-            { stations: ['Славянский бульвар', 'Фили'], time: 6 },
-            { stations: ['Фили', 'Москва-Сити'], time: 3 },
-            { stations: ['Москва-Сити', 'Беговая'], time: 3 },
-            { stations: ['Беговая', 'Белорусская'], time: 6 },
-            { stations: ['Белорусская', 'Савёловская'], time: 6 },
-            { stations: ['Савёловская', 'Тимирязевская'], time: 8 },
-            { stations: ['Тимирязевская', 'Окружная'], time: 6 },
-            { stations: ['Окружная', 'Дегунино'], time: 2 },
-            { stations: ['Дегунино', 'Бескудниково'], time: 4 },
-            { stations: ['Бескудниково', 'Илимская'], time: 2 },
-            { stations: ['Илимская', 'Лианозово'], time: 2 },
-            { stations: ['Лианозово', 'Марк'], time: 2 },
-            { stations: ['Марк', 'Новодачная'], time: 4 },
-            { stations: ['Новодачная', 'Долгопрудная'], time: 2 },
-            { stations: ['Долгопрудная', 'Водники'], time: 2 },
-            { stations: ['Водники', 'Хлебниково'], time: 3 },
-            { stations: ['Хлебниково', 'Шереметьевская'], time: 2 },
-            { stations: ['Шереметьевская', 'Лобня'], time: 5 }
-        ]
-    },
-    {
-        'line': 'Курско-Рижский диаметр',
-        'color': 'd68ab1',
-        'stations': [
-            { stations: ['Подольск', 'Силикатная'], time: 5 },
-            { stations: ['Силикатная', 'Остафьево'], time: 2 },
-            { stations: ['Остафьево', 'Щербинка'], time: 2 },
-            { stations: ['Щербинка', 'Бутово'], time: 3 },
-            { stations: ['Бутово', 'Новая Битца'], time: 4 },
-            { stations: ['Новая Битца', 'Битца'], time: 2 },
-            { stations: ['Битца', 'Красный Строитель'], time: 3 },
-            { stations: ['Красный Строитель', 'Покровское'], time: 3 },
-            { stations: ['Покровское', 'Котляково'], time: 2 },
-            { stations: ['Котляково', 'Царицыно'], time: 3 },
-            { stations: ['Царицыно', 'Москворечье'], time: 4 },
-            { stations: ['Москворечье', 'Курьяново'], time: 2 },
-            { stations: ['Курьяново', 'Перерва'], time: 2 },
-            { stations: ['Перерва', 'Депо'], time: 2 },
-            { stations: ['Депо', 'Люблино'], time: 2 },
-            { stations: ['Люблино', 'Печатники'], time: 3 },
-            { stations: ['Печатники', 'Текстильщики'], time: 3 },
-            { stations: ['Текстильщики', 'Новохохловская'], time: 2 },
-            { stations: ['Новохохловская', 'Калитники'], time: 2 },
-            { stations: ['Калитники', 'Москва Товарная'], time: 2 },
-            { stations: ['Москва Товарная', 'Курская'], time: 3 },
-            { stations: ['Курская', 'Площадь трёх вокзалов'], time: 6 },
-            { stations: ['Площадь трёх вокзалов', 'Рижская'], time: 5 },
-            { stations: ['Рижская', 'Марьина Роща'], time: 4 },
-            { stations: ['Марьина Роща', 'Дмитровская'], time: 6 },
-            { stations: ['Дмитровская', 'Гражданская'], time: 2 },
-            { stations: ['Гражданская', 'Красный Балтиец'], time: 3 },
-            { stations: ['Текстильщики', 'Стрешнево'], time: 3 },
-            { stations: ['Новохохловская', 'Щукинская'], time: 2 },
-            { stations: ['Калитники', 'Тушинская'], time: 5 },
-            { stations: ['Москва Товарная', 'Трикотажная'], time: 3 },
-            { stations: ['Курская', 'Волоколамская '], time: 6 },
-            { stations: ['Площадь трёх вокзалов', 'Пенягино'], time: 4 },
-            { stations: ['Рижская', 'Павшино'], time: 2 },
-            { stations: ['Марьина Роща', 'Красногорская'], time: 2 },
-            { stations: ['Дмитровская', 'Опалиха'], time: 2 },
-            { stations: ['Гражданская', 'Аникеевкая'], time: 3 },
-            { stations: ['Площадь трёх вокзалов', 'Нахабино'], time: 4 },
-        ]
-    },
-    {
-        'line': 'Ленинградско-Казанский диаметр',
-        'color': '1cb2a7',
-        'stations': [
-            { stations: ['Зеленоград-Крюково', 'Фирсановская'], time: 9 },
-            { stations: ['Фирсановская', 'Сходня'], time: 4 },
-            { stations: ['Сходня', 'Подрезково'], time: 3 },
-            { stations: ['Подрезково', 'Новоподрезково'], time: 2 },
-            { stations: ['Новоподрезково', 'Молжаниново'], time: 3 },
-            { stations: ['Молжаниново', 'Химки'], time: 5 },
-            { stations: ['Химки', 'Левобережная'], time: 2 },
-            { stations: ['Левобережная', 'Ховрина'], time: 2 },
-            { stations: ['Ховрина', 'Грачёвская'], time: 3 },
-            { stations: ['Грачёвская', 'Моссельмаш'], time: 2 },
-            { stations: ['Моссельмаш', 'Лихоборы'], time: 3 },
-            { stations: ['Лихоборы', 'Петровско-Разумовская'], time: 7 },
-            { stations: ['Петровско-Разумовская', 'Останкино'], time: 5 },
-            { stations: ['Останкино', 'Матьково'], time: 16 },
-            { stations: ['Матьково', 'Электрозаводская'], time: 5 },
-            { stations: ['Электрозаводская', 'Сортировочная'], time: 2 },
-            { stations: ['Сортировочная', 'Авиамоторная'], time: 3 },
-            { stations: ['Авиамоторная', 'Андроновка'], time: 3 },
-            { stations: ['Андроновка', 'Перово'], time: 3 },
-            { stations: ['Перово', 'Плющево'], time: 2 },
-            { stations: ['Плющево', 'Вешняки'], time: 3 },
-            { stations: ['Вешняки', 'Выхино'], time: 2 },
-            { stations: ['Выхино', 'Косино'], time: 3 },
-            { stations: ['Косино', 'Ухтомская'], time: 2 },
-            { stations: ['Ухтомская', 'Люберцы'], time: 4 },
-            { stations: ['Люберцы', 'Панки'], time: 3 },
-            { stations: ['Панки', 'Томилино'], time: 3 },
-            { stations: ['Томилино', 'Красково'], time: 2 },
-            { stations: ['Красково', 'Малаховка'], time: 2 },
-            { stations: ['Малаховка', 'Удельная'], time: 3 },
-            { stations: ['Удельная', 'Быково'], time: 2 },
-            { stations: ['Быково', 'Ильинская'], time: 3 },
-            { stations: ['Ильинская', 'Отдых'], time: 3 },
-            { stations: ['Отдых', 'Кратово'], time: 3 },
-            { stations: ['Кратово', 'Есенинская'], time: 2 },
-            { stations: ['Есенинская', 'Фабричная'], time: 2 },
-            { stations: ['Фабричная', 'Ременское'], time: 2 },
-            { stations: ['Ременское', 'Ипподром'], time: 2 }
-        ]
-    },
-    {
-        'line': 'Калужско-Нижегородский диаметр',
-        'color': '1cb2a7',
-        'stations': [
-            { stations: ['Апрелевка', 'Победа'], time: 3 },
-            { stations: ['Победа', 'Крёкшино'], time: 3 },
-            { stations: ['Крёкшино', 'Санино'], time: 3 },
-            { stations: ['Санино', 'Кокошкино'], time: 3 },
-            { stations: ['Кокошкино', 'Толстопальцево'], time: 2 },
-            { stations: ['Толстопальцево', 'Лесной Городок'], time: 5 },
-            { stations: ['Лесной Городок', 'Внуково'], time: 4 },
-            { stations: ['Внуково', 'Мичуринец'], time: 3 },
-            { stations: ['Мичуринец', 'Переделкино'], time: 4 },
-            { stations: ['Переделкино', 'Солнечная'], time: 3 },
-            { stations: ['Солнечная', 'Мещерская'], time: 3 },
-            { stations: ['Мещерская', 'Очаково'], time: 3 },
-            { stations: ['Очаково', 'Аминьевская'], time: 3 },
-            { stations: ['Аминьевская', 'Матвеевская'], time: 3 },
-            { stations: ['Матвеевская', 'Минская'], time: 3 },
-            { stations: ['Минская', 'Поклонная'], time: 3 },
-            { stations: ['Поклонная', 'Кутузовская'], time: 3 },
-            { stations: ['Кутузовская', 'Москва-Сити'], time: 1 },
-            { stations: ['Москва-Сити', 'Белорусская'], time: 9 },
-            { stations: ['Белорусская', 'Савёловская'], time: 3 },
-            { stations: ['Савёловская', 'Марьина Роща'], time: 3 },
-            { stations: ['Марьина Роща', 'Площадь трёх вокзалов'], time: 6 },
-            { stations: ['Площадь трёх вокзалов', 'Курская'], time: 4 },
-            { stations: ['Курская', 'Серп и Молот'], time: 4 },
-            { stations: ['Серп и Молот', 'Нижегородская'], time: 5 },
-            { stations: ['Нижегородская', 'Чухлинка'], time: 3 },
-            { stations: ['Чухлинка', 'Кусково'], time: 3 },
-            { stations: ['Кусково', 'Новогиреево'], time: 3 },
-            { stations: ['Новогиреево', 'Реутов'], time: 3 },
-            { stations: ['Реутов', 'Никольское'], time: 4 },
-            { stations: ['Никольское', 'Салтыковская'], time: 3 },
-            { stations: ['Салтыковская', 'Кучино'], time: 3 },
-            { stations: ['Кучино', 'Ольгино'], time: 3 },
-            { stations: ['Ольгино', 'Железнодорожная'], time: 5 }
-        ]
-}
-];
+// var metroLines  = [
+//     {
+//         'line': 'Сокольническая линия',
+//         'color': 'cf2028',
+//         'stations': [
+//             { stations: ['Бульвар Рокоссовского', 'Черкизовская'], time: 2 },
+//             { stations: ['Черкизовская', 'Преображенская площадь'], time: 3 },
+//             { stations: ['Преображенская площадь', 'Сокольники'], time: 3 },
+//             { stations: ['Сокольники', 'Красносельская'], time: 1 },
+//             { stations: ['Красносельская', 'Комсомольская'], time: 1 },
+//             { stations: ['Комсомольская', 'Красные ворота'], time: 1 },
+//             { stations: ['Красные ворота', 'Чистые пруды'], time: 1 },
+//             { stations: ['Чистые пруды', 'Лубянка'], time: 1 },
+//             { stations: ['Лубянка', 'Охотный ряд'], time: 1 },
+//             { stations: ['Охотный ряд', 'Библиотека имени Ленина'], time: 1 },
+//             { stations: ['Библиотека имени Ленина', 'Кропоткинская'], time: 1 },
+//             { stations: ['Кропоткинская', 'Парк культуры'], time: 2 },
+//             { stations: ['Парк культуры', 'Фрунзенская'], time: 2 },
+//             { stations: ['Фрунзенская', 'Спортивная'], time: 1 },
+//             { stations: ['Спортивная', 'Воробьёвы горы'], time: 3 },
+//             { stations: ['Воробьёвы горы', 'Университет'], time: 4 },
+//             { stations: ['Университет', 'Проспект Вернадского'], time: 2 },
+//             { stations: ['Проспект Вернадского', 'Юго-Западная'], time: 2 },
+//             { stations: ['Юго-Западная', 'Тропарёво'], time: 3 },
+//             { stations: ['Тропарёво', 'Румянцево'], time: 3 },
+//             { stations: ['Румянцево', 'Саларьево'], time: 3 },
+//             { stations: ['Саларьево', 'Филатов Луг'], time: 3 },
+//             { stations: ['Филатов Луг', 'Прокшино'], time: 2 },
+//             { stations: ['Прокшино', 'Ольховая'], time: 3 },
+//             { stations: ['Ольховая', 'Коммунарка'], time: 1 }
+//         ]
+//     },
+//     {
+//         'line': 'Замоскворецкая линия',
+//         'color': '13703a',
+//         'stations': [
+//             { stations: ['Алма-Атинская', 'Красногвардейская'], time: 4 },
+//             { stations: ['Красногвардейская', 'Домодедовская'], time: 2 },
+//             { stations: ['Домодедовская', 'Орехово'], time: 2 },
+//             { stations: ['Орехово', 'Царицыно'], time: 2 },
+//             { stations: ['Царицыно', 'Кантемировская'], time: 2 },
+//             { stations: ['Кантемировская', 'Каширская'], time: 3 },
+//             { stations: ['Каширская', 'Коломенская'], time: 3 },
+//             { stations: ['Коломенская', 'Технопарк'], time: 2 },
+//             { stations: ['Технопарк', 'Автозаводская'], time: 2 },
+//             { stations: ['Автозаводская', 'Павелецкая'], time: 3 },
+//             { stations: ['Павелецкая', 'Новокузнецкая'], time: 2 },
+//             { stations: ['Новокузнецкая', 'Театральная'], time: 2 },
+//             { stations: ['Театральная', 'Тверская'], time: 2 },
+//             { stations: ['Тверская', 'Маяковская'], time: 1 },
+//             { stations: ['Маяковская', 'Белорусская'], time: 2 },
+//             { stations: ['Белорусская', 'Динамо'], time: 2 },
+//             { stations: ['Динамо', 'Аэропорт'], time: 2 },
+//             { stations: ['Аэропорт', 'Сокол'], time: 2 },
+//             { stations: ['Сокол', 'Войковская'], time: 2 },
+//             { stations: ['Войковская', 'Водный стадион'], time: 3 },
+//             { stations: ['Водный стадион', 'Речной вокзал'], time: 2 },
+//             { stations: ['Речной вокзал', 'Беломорская'], time: 1 },
+//             { stations: ['Беломорская', 'Ховрино'], time: 2 }
+//         ]
+//     },
+//     {
+//         'line': 'Арбатско-Покровская линия',
+//         'color': '283981',
+//         'stations': [
+//             { stations: ['Щёлковская', 'Первомайская'], time: 2 },
+//             { stations: ['Первомайская', 'Измайловская'], time: 3 },
+//             { stations: ['Измайловская', 'Партизанская'], time: 3 },
+//             { stations: ['Партизанская', 'Семёновская'], time: 2 },
+//             { stations: ['Семёновская', 'Электрозаводская'], time: 1 },
+//             { stations: ['Электрозаводская', 'Бауманская'], time: 2 },
+//             { stations: ['Бауманская', 'Курская'], time: 7 },
+//             { stations: ['Курская', 'Площадь Революции'], time: 3 },
+//             { stations: ['Площадь Революции', 'Арбатская'], time: 2 },
+//             { stations: ['Арбатская', 'Смоленская'], time: 2 },
+//             { stations: ['Смоленская', 'Киевская'], time: 5 },
+//             { stations: ['Киевская', 'Парк Победы'], time: 8 },
+//             { stations: ['Парк Победы', 'Славянский бульвар'], time: 4 },
+//             { stations: ['Славянский бульвар', 'Кунцевская'], time: 2 },
+//             { stations: ['Кунцевская', 'Молодёжная'], time: 3 },
+//             { stations: ['Молодёжная', 'Крылатское'], time: 2 },
+//             { stations: ['Крылатское', 'Строгино'], time: 8 },
+//             { stations: ['Строгино', 'Мякинино'], time: 3 },
+//             { stations: ['Мякинино', 'Волоколамская'], time:  2},
+//             { stations: ['Волоколамская', 'Митино'], time: 3 },
+//             { stations: ['Митино', 'Пятницкое шоссе'], time: 3 }
+//         ]
+//     },
+//     {
+//         'line': 'Филёвская линия',
+//         'color': '19a2dc',
+//         'stations': [
+//             { stations: ['Кунцевская', 'Пионерская'], time: 1 },
+//             { stations: ['Пионерская', 'Филевский парк'], time: 2 },
+//             { stations: ['Филевский парк', 'Багратионовская'], time: 1 },
+//             { stations: ['Багратионовская', 'Фили'], time: 2 },
+//             { stations: ['Фили', 'Кутузовская'], time: 2 },
+//             { stations: ['Кутузовская', 'Студенческая'], time:  2},
+//             { stations: ['Студенческая', 'Киевская'], time: 2 },
+//             { stations: ['Киевская', 'Площадь Смоленская'], time: 2 },
+//             { stations: ['Площадь Смоленская', 'Арбатская'], time: 2 },
+//             { stations: ['Арбатская', 'Александровский сад'], time: 1 }
+//         ]
+//     },
+//     {
+//     'line': 'Кольцевая линия',
+//     'color': '8a3127',
+//     'stations': [
+//         { stations: ['Парк культуры', 'Октябрьская'], time: 2 },
+//         { stations: ['Октябрьская', 'Добрынинская'], time: 2 },
+//         { stations: ['Добрынинская', 'Павелецкая'], time: 1 },
+//         { stations: ['Павелецкая', 'Таганская'], time: 1 },
+//         { stations: ['Таганская', 'Курская'], time: 2 },
+//         { stations: ['Курская', 'Комсомольская'], time: 2 },
+//         { stations: ['Комсомольская', 'Проспект Мира'], time: 2 },
+//         { stations: ['Проспект Мира', 'Новослободская'], time: 2 },
+//         { stations: ['Новослободская', 'Белорусская'], time: 2 },
+//         { stations: ['Белорусская', 'Краснопресненская'], time: 2 },
+//         { stations: ['Краснопресненская', 'Киевская'], time: 2 },
+//         { stations: ['Киевская', 'Парк культуры'], time: 2 }
+//         ]
+//     },
+//         {
+//         'line': 'Калужско-Рижская линия',
+//         'color': 'f78e38',
+//         'stations': [
+//             { stations: ['Медведково', 'Бабушкинская'], time: 3 },
+//             { stations: ['Бабушкинская', 'Свиблово'], time: 2 },
+//             { stations: ['Свиблово', 'Ботанический сад'], time: 2 },
+//             { stations: ['Ботанический сад', 'ВДНХ'], time: 3 },
+//             { stations: ['ВДНХ', 'Алексеевская'], time: 2 },
+//             { stations: ['Алексеевская', 'Рижская'], time: 2 },
+//             { stations: ['Рижская', 'Проспект Мира'], time: 2 },
+//             { stations: ['Проспект Мира', 'Сухаревская'], time: 2 },
+//             { stations: ['Сухаревская', 'Тургеневская'], time: 1 },
+//             { stations: ['Тургеневская', 'Китай-город'], time: 2 },
+//             { stations: ['Китай-город', 'Третьяковская'], time: 2 },
+//             { stations: ['Третьяковская', 'Октябрьская'], time: 2 },
+//             { stations: ['Октябрьская', 'Шаболовская'], time: 2 },
+//             { stations: ['Шаболовская', 'Ленинский проспект'], time: 2 },
+//             { stations: ['Ленинский проспект', 'Академическая'], time: 2 },
+//             { stations: ['Академическая', 'Профсоюзная'], time: 2 },
+//             { stations: ['Профсоюзная', 'Новые Черёмушки'], time: 2 },
+//             { stations: ['Новые Черёмушки', 'Калужская'], time: 2 },
+//             { stations: ['Калужская', 'Беляево'], time: 3 },
+//             { stations: ['Беляево', 'Коньково'], time: 2 },
+//             { stations: ['Коньково', 'Тёплый стан'], time: 3 },
+//             { stations: ['Тёплый стан', 'Ясенево'], time: 3 },
+//             { stations: ['Ясенево', 'Новоясеневская'], time: 2 }
+//         ]
+//     },
+//     {
+//         'line': 'Таганско-Краснопресненская линия',
+//         'color': 'a35d94',
+//         'stations': [
+//             { stations: ['Планерная', 'Сходненская'], time: 1 },
+//             { stations: ['Сходненская', 'Тушинская'], time: 3 },
+//             { stations: ['Тушинская', 'Спартак'], time: 1 },
+//             { stations: ['Спартак', 'Щукинская'], time: 3 },
+//             { stations: ['Щукинская', 'Октябрьское поле'], time:  3},
+//             { stations: ['Октябрьское поле', 'Полежаевская'], time: 3 },
+//             { stations: ['Полежаевская', 'Беговая'], time: 2 },
+//             { stations: ['Беговая', 'Улица 1905 года'], time: 2 },
+//             { stations: ['Улица 1905 года', 'Баррикадная'], time: 2 },
+//             { stations: ['Баррикадная', 'Пушкинская'], time: 2 },
+//             { stations: ['Пушкинская', 'Кузнецкий мост'], time: 1 },
+//             { stations: ['Кузнецкий мост', 'Китай-город'], time: 1 },
+//             { stations: ['Китай-город', 'Таганская'], time: 2 },
+//             { stations: ['Таганская', 'Пролетарская'], time: 2 },
+//             { stations: ['Пролетарская', 'Волгоградский проспект'], time: 2 },
+//             { stations: ['Волгоградский проспект', 'Текстильщики'], time: 4 },
+//             { stations: ['Текстильщики', 'Кузьминки'], time: 2 },
+//             { stations: ['Кузьминки', 'Рязанский проспект'], time: 3 },
+//             { stations: ['Рязанский проспект', 'Выхино'], time: 2 },
+//             { stations: ['Выхино', 'Лермонтовский проспект'], time: 4 },
+//             { stations: ['Лермонтовский проспект', 'Жулебино'], time: 2 },
+//             { stations: ['Жулебино', 'Котельники'], time: 2 }
+//         ]
+//     },
+//     {
+//         'line': 'Калининская линия',
+//         'color': 'fde34f',
+//         'stations': [
+//             { stations: ['Новокосино', 'Новогиреево'], time: 4 },
+//             { stations: ['Новогиреево', 'Перово'], time: 2 },
+//             { stations: ['Перово', 'Шоссе Энтузиастов'], time: 3 },
+//             { stations: ['Шоссе Энтузиастов', 'Авиамоторная'], time: 2 },
+//             { stations: ['Авиамоторная', 'Площадь Ильича'], time: 3 },
+//             { stations: ['Площадь Ильича', 'Марксистская'], time: 2 },
+//             { stations: ['Марксистская', 'Третьяковская'], time: 2 },
+//         ]
+//     },
+//     {
+//         'line': 'Солнцевская',
+//         'color': 'fde34f',
+//         'stations': [
+//             { stations: ['Деловой центр', 'Парк Победы'], time: 4 },
+//             { stations: ['Парк Победы', 'Минская'], time: 3 },
+//             { stations: ['Минская', 'Ломоносовский проспект'], time: 3 },
+//             { stations: ['Ломоносовский проспект', 'Раменки'], time: 2 },
+//             { stations: ['Раменки', 'Мичуринский проспект'], time: 1 },
+//             { stations: ['Мичуринский проспект', 'Озёрная'], time: 3 },
+//             { stations: ['Озёрная', 'Говорово'], time: 2 },
+//             { stations: ['Говорово', 'Солнцево'], time: 2 },
+//             { stations: ['Солнцево', 'Боровское шоссе'], time: 3 },
+//             { stations: ['Боровское шоссе', 'Новопеределкино'], time: 2 },
+//             { stations: ['Новопеределкино', 'Рассказовка'], time: 1 },
+//             { stations: ['Рассказовка', 'Пыхтино'], time: 2 },
+//             { stations: ['Пыхтино', 'Аэропорт Внуково'], time: 3 }
+//         ]
+//     },
+//     {
+//         'line': 'Серпуховско-Тимирязевская линия',
+//         'color': 'abaeba',
+//         'stations': [
+//             { stations: ['Алтуфьево', 'Бибирево'], time: 3 },
+//             { stations: ['Бибирево', 'Отрадное'], time: 3 },
+//             { stations: ['Отрадное', 'Владыкино'], time: 2 },
+//             { stations: ['Владыкино', 'Петровско-Разумовская'], time: 2 },
+//             { stations: ['Петровско-Разумовская', 'Тимирязевская'], time: 3 },
+//             { stations: ['Тимирязевская', 'Дмитровская'], time: 1 },
+//             { stations: ['Дмитровская', 'Савёловская'], time: 2 },
+//             { stations: ['Савёловская', 'Менделеевская'], time: 2 },
+//             { stations: ['Менделеевская', 'Цветной бульвар'], time: 2 },
+//             { stations: ['Цветной бульвар', 'Чеховская'], time: 1 },
+//             { stations: ['Чеховская', 'Боровицкая'], time: 2 },
+//             { stations: ['Боровицкая', 'Полянка'], time: 2 },
+//             { stations: ['Полянка', 'Серпуховская'], time: 2 },
+//             { stations: ['Серпуховская', 'Тульская'], time: 3 },
+//             { stations: ['Тульская', 'Нагатинская'], time: 4 },
+//             { stations: ['Нагатинская', 'Нагорная'], time: 2 },
+//             { stations: ['Нагорная', 'Нахимовский проспект'], time: 1 },
+//             { stations: ['Нахимовский проспект', 'Севастопольская'], time: 1 },
+//             { stations: ['Севастопольская', 'Чертановская'], time: 2 },
+//             { stations: ['Чертановская', 'Южная'], time: 3 },
+//             { stations: ['Южная', 'Пражская'], time: 1 },
+//             { stations: ['Пражская', 'Улица академика Янгеля'], time: 2 },
+//             { stations: ['Улица академика Янгеля', 'Аннино'], time: 2 },
+//             { stations: ['Аннино', 'Бульвар Дмитрия Донского'], time: 2 }
+//         ]
+//     },
+//     {
+//         'line': 'Люблинско-Дмитровская линия',
+//         'color': 'aad16e',
+//         'stations': [
+//             { stations: ['Физтех', 'Лианозово'], time: 3 },
+//             { stations: ['Лианозово', 'Яхромская'], time: 2 },
+//             { stations: ['Яхромская', 'Селигерская'], time: 2 },
+//             { stations: ['Селигерская', 'Верхние Лихоборы'], time: 1 },
+//             { stations: ['Верхние Лихоборы', 'Окружная'], time: 1 },
+//             { stations: ['Окружная', 'Петровско-Разумовская'], time: 1 },
+//             { stations: ['Петровско-Разумовская', 'Фонвизинская'], time: 4 },
+//             { stations: ['Фонвизинская', 'Бутырская'], time: 2 },
+//             { stations: ['Бутырская', 'Марьина роща'], time: 3 },
+//             { stations: ['Марьина роща', 'Достоевская'], time: 3 },
+//             { stations: ['Достоевская', 'Трубная'], time: 2 },
+//             { stations: ['Трубная', 'Сретенский бульвар'], time: 2 },
+//             { stations: ['Сретенский бульвар', 'Чкаловская'], time: 2 },
+//             { stations: ['Чкаловская', 'Римская'], time: 2 },
+//             { stations: ['Римская', 'Крестьянская застава'], time: 2 },
+//             { stations: ['Крестьянская застава', 'Дубровка'], time: 2 },
+//             { stations: ['Дубровка', 'Кожуховская'], time: 2 },
+//             { stations: ['Кожуховская', 'Печатники'], time: 3 },
+//             { stations: ['Печатники', 'Волжская'], time: 2 },
+//             { stations: ['Волжская', 'Люблино'], time: 2 },
+//             { stations: ['Люблино', 'Братиславская'], time: 2 },
+//             { stations: ['Братиславская', 'Марьино'], time: 1 },
+//             { stations: ['Марьино', 'Борисово'], time: 3 },
+//             { stations: ['Борисово', 'Шипиловская'], time: 3 },
+//             { stations: ['Шипиловская', 'Зябликово'], time: 3 }
+//         ]
+//     },
+//     {
+//         'line': 'Большая кольцевая',
+//         'color': '1cb2a7',
+//         'stations': [
+//             { stations: ['Народное Ополчение', 'Мнёвники'], time: 3 },
+//             { stations: ['Мнёвники', 'Терехово'], time: 2 },
+//             { stations: ['Терехово', 'Кунцевская'], time: 3 },
+//             { stations: ['Кунцевская', 'Давыдково'], time: 2 },
+//             { stations: ['Давыдково', 'Аминьевская'], time: 3 },
+//             { stations: ['Аминьевская', 'Мичуринский проспект'], time: 2 },
+//             { stations: ['Мичуринский проспект', 'Проспект Вернадского'], time: 2 },
+//             { stations: ['Проспект Вернадского', 'Новаторская'], time: 2 },
+//             { stations: ['Новаторская', 'Воронцовская'], time: 2 },
+//             { stations: ['Воронцовская', 'Зюзино'], time: 3 },
+//             { stations: ['Зюзино', 'Каховская'], time: 2 },
+//             { stations: ['Каховская', 'Варшавская'], time: 2 },
+//             { stations: ['Варшавская', 'Каширская'], time: 3 },
+//             { stations: ['Каширская', 'Кленовый бульвар'], time: 4 },
+//             { stations: ['Кленовый бульвар', 'Нагатинский затон'], time: 2 },
+//             { stations: ['Нагатинский затон', 'Печатники'], time: 2 },
+//             { stations: ['Печатники', 'Текстильщики'], time: 2 },
+//             { stations: ['Текстильщики', 'Нижегородская'], time: 4 },
+//             { stations: ['Нижегородская', 'Авиамоторная'], time: 4 },
+//             { stations: ['Авиамоторная', 'Лефортово'], time: 2 },
+//             { stations: ['Лефортово', 'Электрозаводская'], time: 2 },
+//             { stations: ['Электрозаводская', 'Сокольники'], time: 3 },
+//             { stations: ['Сокольники', 'Рижская'], time: 4 },
+//             { stations: ['Рижская', 'Марьина Роща'], time: 2 },
+//             { stations: ['Марьина Роща', 'Савёловская'], time: 3 },
+//             { stations: ['Савёловская', 'Петровский парк'], time: 3 },
+//             { stations: ['Петровский парк', 'ЦСКА'], time: 2 },
+//             { stations: ['ЦСКА', 'Хорошёвская'], time: 2 }
+//         ]
+//     },
+//     {
+//         'line': 'Бутовская линия',
+//         'color': '8ec9ea',
+//         'stations': [
+//             { stations: ['Битцевский парк', 'Лесопарковая'], time: 3 },
+//             { stations: ['Лесопарковая', 'Улица Старокачаловская'], time: 3 },
+//             { stations: ['Улица Старокачаловская', 'Улица Скобелевская'], time: 5 },
+//             { stations: ['Улица Скобелевская', 'Бульвар адмирала Ушакова'], time: 1 },
+//             { stations: ['Бульвар адмирала Ушакова', 'Улица Горчакова'], time: 2 },
+//             { stations: ['Улица Горчакова', 'Бунинская аллея'], time: 2 }
+//         ]
+//     },
+//     {
+//         'line': 'Московский монорельс',
+//         'color': 'd68ab1',
+//         'stations': [
+//             { stations: ['Тимирязевская', 'Улица Милашенкова'], time: 2 },
+//             { stations: ['Улица Милашенкова', 'Телецентр'], time: 2 },
+//             { stations: ['Телецентр', 'Улица Академика Королёва'], time: 2 },
+//             { stations: ['Улица Академика Королёва', 'Выставочный центр'], time: 2 },
+//             { stations: ['Выставочный центр', 'Улица Сергея Эйзенштейна'], time: 2 }
+//         ]
+//     },
+//     {
+//         'line': 'Московское центральное кольцо',
+//         'color': 'd68ab1',
+//         'stations': [
+//             { stations: ['Окружная', 'Владыкино'], time: 2 },
+//             { stations: ['Владыкино', 'Ботанический сад'], time: 2 },
+//             { stations: ['Ботанический сад', 'Ростокино'], time: 2 },
+//             { stations: ['Ростокино', 'Белокаменная'], time: 2 },
+//             { stations: ['Белокаменная', 'Бульвар Рокоссовского'], time: 2 },
+//             { stations: ['Бульвар Рокоссовского', 'Локомотив'], time: 1 },
+//             { stations: ['Локомотив', 'Измайлово'], time: 2 },
+//             { stations: ['Измайлово', 'Соколиная Гора'], time: 3 },
+//             { stations: ['Соколиная Гора', 'Шоссе Энтузиастов'], time: 2 },
+//             { stations: ['Шоссе Энтузиастов', 'Андроновка'], time: 3 },
+//             { stations: ['Андроновка', 'Нижегородская'], time: 2 },
+//             { stations: ['Нижегородская', 'Новохохловская'], time: 2 },
+//             { stations: ['Новохохловская', 'Угрешская'], time: 4 },
+//             { stations: ['Угрешская', 'Дубровка'], time: 3 },
+//             { stations: ['Дубровка', 'Автозаводская'], time: 1 },
+//             { stations: ['Автозаводская', 'ЗИЛ'], time: 1 },
+//             { stations: ['ЗИЛ', 'Верхние Котлы'], time: 2 },
+//             { stations: ['Верхние Котлы', 'Крымская'], time: 2 },
+//             { stations: ['Крымская', 'Площадь Гагарина'], time: 2 },
+//             { stations: ['Площадь Гагарина', 'Лужники'], time: 2 },
+//             { stations: ['Лужники', 'Кутузовская'], time: 5 },
+//             { stations: ['Кутузовская', 'Москва-Сити'], time: 2 },
+//             { stations: ['Москва-Сити', 'Шелепиха'], time: 1 },
+//             { stations: ['Шелепиха', 'Хорошёво'], time: 2 },
+//             { stations: ['Хорошёво', 'Зорге'], time: 1 },
+//             { stations: ['Зорге', 'Панфиловская'], time: 2 },
+//             { stations: ['Панфиловская', 'Стрешнево'], time: 1 },
+//             { stations: ['Стрешнево', 'Балтийская'], time: 3 },
+//             { stations: ['Балтийская', 'Коптево'], time: 2 },
+//             { stations: ['Коптево', 'Лихоборы'], time: 2 }
+//         ]
+//     },
+//     {
+//         'line': 'Некрасовская линия',
+//         'color': 'd68ab1',
+//         'stations': [
+//             { stations: ['Нижегородская', 'Стахановская'], time: 2 },
+//             { stations: ['Стахановская', 'Окская'], time: 2 },
+//             { stations: ['Окская', 'Юго-Восточная'], time: 3 },
+//             { stations: ['Юго-Восточная', 'Косино'], time: 3 },
+//             { stations: ['Косино', 'Улица Дмитриевского'], time: 3 },
+//             { stations: ['Улица Дмитриевского', 'Лухмановская'], time: 2 },
+//             { stations: ['Лухмановская', 'Некрасовка'], time: 2 }
+//         ]
+//     },
+//     {
+//         'line': 'Троицкая линия',
+//         'color': 'd68ab1',
+//         'stations': [
+//             { stations: ['Новаторская', 'Университет дружбы народов'], time: 3 },
+//             { stations: ['Университет дружбы народов', 'Генерала Тюленева'], time: 2 },
+//             { stations: ['Генерала Тюленева', 'Тютчевская'], time: 3 },
+//         ]
+//     },
+//     {
+//         'line': 'Белорусско-Савёловский диаметр',
+//         'color': 'd68ab1',
+//         'stations': [
+//             { stations: ['Одинцово', 'Баковка'], time: 5 },
+//             { stations: ['Баковка', 'Сколково'], time: 3 },
+//             { stations: ['Сколково', 'Немчиновка'], time: 3 },
+//             { stations: ['Немчиновка', 'Сетунь'], time: 3 },
+//             { stations: ['Сетунь', 'Рабочий Посёлок'], time: 2 },
+//             { stations: ['Рабочий Посёлок', 'Кунцевская'], time: 2 },
+//             { stations: ['Кунцевская', 'Славянский бульвар'], time: 3 },
+//             { stations: ['Славянский бульвар', 'Фили'], time: 6 },
+//             { stations: ['Фили', 'Москва-Сити'], time: 3 },
+//             { stations: ['Москва-Сити', 'Беговая'], time: 3 },
+//             { stations: ['Беговая', 'Белорусская'], time: 6 },
+//             { stations: ['Белорусская', 'Савёловская'], time: 6 },
+//             { stations: ['Савёловская', 'Тимирязевская'], time: 8 },
+//             { stations: ['Тимирязевская', 'Окружная'], time: 6 },
+//             { stations: ['Окружная', 'Дегунино'], time: 2 },
+//             { stations: ['Дегунино', 'Бескудниково'], time: 4 },
+//             { stations: ['Бескудниково', 'Илимская'], time: 2 },
+//             { stations: ['Илимская', 'Лианозово'], time: 2 },
+//             { stations: ['Лианозово', 'Марк'], time: 2 },
+//             { stations: ['Марк', 'Новодачная'], time: 4 },
+//             { stations: ['Новодачная', 'Долгопрудная'], time: 2 },
+//             { stations: ['Долгопрудная', 'Водники'], time: 2 },
+//             { stations: ['Водники', 'Хлебниково'], time: 3 },
+//             { stations: ['Хлебниково', 'Шереметьевская'], time: 2 },
+//             { stations: ['Шереметьевская', 'Лобня'], time: 5 }
+//         ]
+//     },
+//     {
+//         'line': 'Курско-Рижский диаметр',
+//         'color': 'd68ab1',
+//         'stations': [
+//             { stations: ['Подольск', 'Силикатная'], time: 5 },
+//             { stations: ['Силикатная', 'Остафьево'], time: 2 },
+//             { stations: ['Остафьево', 'Щербинка'], time: 2 },
+//             { stations: ['Щербинка', 'Бутово'], time: 3 },
+//             { stations: ['Бутово', 'Новая Битца'], time: 4 },
+//             { stations: ['Новая Битца', 'Битца'], time: 2 },
+//             { stations: ['Битца', 'Красный Строитель'], time: 3 },
+//             { stations: ['Красный Строитель', 'Покровское'], time: 3 },
+//             { stations: ['Покровское', 'Котляково'], time: 2 },
+//             { stations: ['Котляково', 'Царицыно'], time: 3 },
+//             { stations: ['Царицыно', 'Москворечье'], time: 4 },
+//             { stations: ['Москворечье', 'Курьяново'], time: 2 },
+//             { stations: ['Курьяново', 'Перерва'], time: 2 },
+//             { stations: ['Перерва', 'Депо'], time: 2 },
+//             { stations: ['Депо', 'Люблино'], time: 2 },
+//             { stations: ['Люблино', 'Печатники'], time: 3 },
+//             { stations: ['Печатники', 'Текстильщики'], time: 3 },
+//             { stations: ['Текстильщики', 'Новохохловская'], time: 2 },
+//             { stations: ['Новохохловская', 'Калитники'], time: 2 },
+//             { stations: ['Калитники', 'Москва Товарная'], time: 2 },
+//             { stations: ['Москва Товарная', 'Курская'], time: 3 },
+//             { stations: ['Курская', 'Площадь трёх вокзалов'], time: 6 },
+//             { stations: ['Площадь трёх вокзалов', 'Рижская'], time: 5 },
+//             { stations: ['Рижская', 'Марьина Роща'], time: 4 },
+//             { stations: ['Марьина Роща', 'Дмитровская'], time: 6 },
+//             { stations: ['Дмитровская', 'Гражданская'], time: 2 },
+//             { stations: ['Гражданская', 'Красный Балтиец'], time: 3 },
+//             { stations: ['Текстильщики', 'Стрешнево'], time: 3 },
+//             { stations: ['Новохохловская', 'Щукинская'], time: 2 },
+//             { stations: ['Калитники', 'Тушинская'], time: 5 },
+//             { stations: ['Москва Товарная', 'Трикотажная'], time: 3 },
+//             { stations: ['Курская', 'Волоколамская '], time: 6 },
+//             { stations: ['Площадь трёх вокзалов', 'Пенягино'], time: 4 },
+//             { stations: ['Рижская', 'Павшино'], time: 2 },
+//             { stations: ['Марьина Роща', 'Красногорская'], time: 2 },
+//             { stations: ['Дмитровская', 'Опалиха'], time: 2 },
+//             { stations: ['Гражданская', 'Аникеевкая'], time: 3 },
+//             { stations: ['Площадь трёх вокзалов', 'Нахабино'], time: 4 },
+//         ]
+//     },
+//     {
+//         'line': 'Ленинградско-Казанский диаметр',
+//         'color': '1cb2a7',
+//         'stations': [
+//             { stations: ['Зеленоград-Крюково', 'Фирсановская'], time: 9 },
+//             { stations: ['Фирсановская', 'Сходня'], time: 4 },
+//             { stations: ['Сходня', 'Подрезково'], time: 3 },
+//             { stations: ['Подрезково', 'Новоподрезково'], time: 2 },
+//             { stations: ['Новоподрезково', 'Молжаниново'], time: 3 },
+//             { stations: ['Молжаниново', 'Химки'], time: 5 },
+//             { stations: ['Химки', 'Левобережная'], time: 2 },
+//             { stations: ['Левобережная', 'Ховрина'], time: 2 },
+//             { stations: ['Ховрина', 'Грачёвская'], time: 3 },
+//             { stations: ['Грачёвская', 'Моссельмаш'], time: 2 },
+//             { stations: ['Моссельмаш', 'Лихоборы'], time: 3 },
+//             { stations: ['Лихоборы', 'Петровско-Разумовская'], time: 7 },
+//             { stations: ['Петровско-Разумовская', 'Останкино'], time: 5 },
+//             { stations: ['Останкино', 'Матьково'], time: 16 },
+//             { stations: ['Матьково', 'Электрозаводская'], time: 5 },
+//             { stations: ['Электрозаводская', 'Сортировочная'], time: 2 },
+//             { stations: ['Сортировочная', 'Авиамоторная'], time: 3 },
+//             { stations: ['Авиамоторная', 'Андроновка'], time: 3 },
+//             { stations: ['Андроновка', 'Перово'], time: 3 },
+//             { stations: ['Перово', 'Плющево'], time: 2 },
+//             { stations: ['Плющево', 'Вешняки'], time: 3 },
+//             { stations: ['Вешняки', 'Выхино'], time: 2 },
+//             { stations: ['Выхино', 'Косино'], time: 3 },
+//             { stations: ['Косино', 'Ухтомская'], time: 2 },
+//             { stations: ['Ухтомская', 'Люберцы'], time: 4 },
+//             { stations: ['Люберцы', 'Панки'], time: 3 },
+//             { stations: ['Панки', 'Томилино'], time: 3 },
+//             { stations: ['Томилино', 'Красково'], time: 2 },
+//             { stations: ['Красково', 'Малаховка'], time: 2 },
+//             { stations: ['Малаховка', 'Удельная'], time: 3 },
+//             { stations: ['Удельная', 'Быково'], time: 2 },
+//             { stations: ['Быково', 'Ильинская'], time: 3 },
+//             { stations: ['Ильинская', 'Отдых'], time: 3 },
+//             { stations: ['Отдых', 'Кратово'], time: 3 },
+//             { stations: ['Кратово', 'Есенинская'], time: 2 },
+//             { stations: ['Есенинская', 'Фабричная'], time: 2 },
+//             { stations: ['Фабричная', 'Ременское'], time: 2 },
+//             { stations: ['Ременское', 'Ипподром'], time: 2 }
+//         ]
+//     },
+//     {
+//         'line': 'Калужско-Нижегородский диаметр',
+//         'color': '1cb2a7',
+//         'stations': [
+//             { stations: ['Апрелевка', 'Победа'], time: 3 },
+//             { stations: ['Победа', 'Крёкшино'], time: 3 },
+//             { stations: ['Крёкшино', 'Санино'], time: 3 },
+//             { stations: ['Санино', 'Кокошкино'], time: 3 },
+//             { stations: ['Кокошкино', 'Толстопальцево'], time: 2 },
+//             { stations: ['Толстопальцево', 'Лесной Городок'], time: 5 },
+//             { stations: ['Лесной Городок', 'Внуково'], time: 4 },
+//             { stations: ['Внуково', 'Мичуринец'], time: 3 },
+//             { stations: ['Мичуринец', 'Переделкино'], time: 4 },
+//             { stations: ['Переделкино', 'Солнечная'], time: 3 },
+//             { stations: ['Солнечная', 'Мещерская'], time: 3 },
+//             { stations: ['Мещерская', 'Очаково'], time: 3 },
+//             { stations: ['Очаково', 'Аминьевская'], time: 3 },
+//             { stations: ['Аминьевская', 'Матвеевская'], time: 3 },
+//             { stations: ['Матвеевская', 'Минская'], time: 3 },
+//             { stations: ['Минская', 'Поклонная'], time: 3 },
+//             { stations: ['Поклонная', 'Кутузовская'], time: 3 },
+//             { stations: ['Кутузовская', 'Москва-Сити'], time: 1 },
+//             { stations: ['Москва-Сити', 'Белорусская'], time: 9 },
+//             { stations: ['Белорусская', 'Савёловская'], time: 3 },
+//             { stations: ['Савёловская', 'Марьина Роща'], time: 3 },
+//             { stations: ['Марьина Роща', 'Площадь трёх вокзалов'], time: 6 },
+//             { stations: ['Площадь трёх вокзалов', 'Курская'], time: 4 },
+//             { stations: ['Курская', 'Серп и Молот'], time: 4 },
+//             { stations: ['Серп и Молот', 'Нижегородская'], time: 5 },
+//             { stations: ['Нижегородская', 'Чухлинка'], time: 3 },
+//             { stations: ['Чухлинка', 'Кусково'], time: 3 },
+//             { stations: ['Кусково', 'Новогиреево'], time: 3 },
+//             { stations: ['Новогиреево', 'Реутов'], time: 3 },
+//             { stations: ['Реутов', 'Никольское'], time: 4 },
+//             { stations: ['Никольское', 'Салтыковская'], time: 3 },
+//             { stations: ['Салтыковская', 'Кучино'], time: 3 },
+//             { stations: ['Кучино', 'Ольгино'], time: 3 },
+//             { stations: ['Ольгино', 'Железнодорожная'], time: 5 }
+//         ]
+// }
+// ];
 var metro = [
     {'line': 'Сокольническая линия', 'stations': ['Бульвар Рокоссовского', 'Черкизовская', 'Преображенская площадь', 'Сокольники', 'Красносельская', 'Комсомольская', 'Красные ворота', 'Чистые пруды', 'Лубянка', 'Охотный ряд', 'Библиотека имени Ленина', 'Кропоткинская', 'Парк культуры', 'Фрунзенская', 'Спортивная', 'Воробьёвы горы', 'Университет', 'Проспект Вернадского', 'Юго-Западная', 'Тропарёво', 'Румянцево', 'Саларьево', 'Филатов Луг', 'Прокшино', 'Ольховая', 'Новомосковская','Потапово'], 'color': 'cf2028'},
     {'line': 'Замоскворецкая линия', 'stations': ['Алма-Атинская', 'Красногвардейская', 'Домодедовская', 'Орехово', 'Царицыно', 'Кантемировская', 'Каширская', 'Коломенская', 'Технопарк', 'Автозаводская', 'Павелецкая', 'Новокузнецкая', 'Театральная', 'Тверская', 'Маяковская', 'Белорусская', 'Динамо', 'Аэропорт', 'Сокол', 'Войковская', 'Водный стадион', 'Речной вокзал', 'Беломорская', 'Ховрино'], 'color': '13703a'},
@@ -2049,22 +2217,33 @@ var metro = [
     {'line': "Калужско-Нижегородский диаметр",'stations': ["Апрелевка", "Победа", "Крёкшино", "Санино", "Кокошкино", "Толстопальцево", "Лесной Городок", "Внуково", "Мичуринец", "Переделкино", "Солнечная", "Мещерская", "Очаково", "Аминьевская", "Матвеевская", "Минская", "Поклонная", "Кутузовская", "Москва-Сити", "Ермаковская", "Беговая", "Белорусская", "Савёловская", "Станколит", "Марьина Роща", "Рижская", "Площадь трёх вокзалов", "Курская", "Серп и Молот", "Нижегородская", "Чухлинка", "Кусково", "Новогиреево", "Реутов", "Никольское", "Салтыковская", "Кучино", "Ольгино", "Железнодорожная", "Апрелевка", "Победа", "Крёкшино"],'color': '1cb2a7'},
 ];
 
-// Запуск функции каждые 3 секунды
+/**
+ * Запускает функцию `checkAndRunRar` каждую секунду.
+ * Обычно используется для автоперерисовки маршрута или обновления данных.
+ */
 setInterval(checkAndRunRar, 1000);
 
-    function clear_route()
+/**
+ * Удаляет DOM-элементы внутри блока callout.
+ * Используется для очистки всплывающих подсказок или окон.
+ */
+function clear_route() {
+    if (document.getElementById("callout"))
     {
-        if (document.getElementById("callout"))
-        {
         document.querySelector('#callout > div').remove();
         document.querySelector('#callout > header').remove();
         document.querySelector('#callout > button').remove();
         document.querySelector('#callout > div').remove();
         document.querySelector('#callout > div > button').remove();
         document.querySelector('#callout > div > button').remove();
-        }
     }
-    function autoCompleteStation() {
+}
+
+/**
+ * Пытается найти станцию по текстовому вводу (`searchString`).
+ * Если находит точное совпадение — вызывает `handleStationClick`.
+ */
+function autoCompleteStation() {
     // Найти совпадения с введенной строкой
     let matchedStation = null;
     let searchText = searchString.trim().toLowerCase();
@@ -2082,6 +2261,11 @@ setInterval(checkAndRunRar, 1000);
         handleStationClick(matchedStation); // Автоматически выбрать станцию
     }
 }
+
+/**
+ * Переключает отображение главного меню.
+ * Скрывает клавиатуру, название станции и карту.
+ */
 function toggleMenu() {
     document.getElementById("keyboard").style.display = "none";
     document.getElementById("Name_station").style.display = "none";
@@ -2096,13 +2280,25 @@ function toggleMenu() {
         document.getElementById("menu").style.display = "none";
     }
 }
+
+/**
+ * Минимально скрывает все элементы интерфейса маршрута.
+ */
 function creale_mar(){
     document.querySelector("#Name_station").style.display = 'none';
     document.querySelector("#keyboard").style.display = 'none';
     document.querySelector("#menu").style.display = 'none';
     // document.querySelector("#div_open").style.display = 'none';
-
 }
+
+/**
+ * Полная очистка маршрута:
+ * - удаляет SVG;
+ * - сбрасывает стили и названия кнопок;
+ * - очищает глобальные массивы;
+ * - сбрасывает отображение интерфейса;
+ * - обнуляет визуальную карту.
+ */
 function creale() {
     // Очищаем маршрут и сбрасываем кнопки
     let departure = document.querySelector("#departureBtn")
@@ -2163,8 +2359,11 @@ function creale() {
     }
 }
 
-
+// Глобальные переменные
+/** @type {HTMLElement|null} */
 let activeButton = null; // Кнопка, в которую будет вставляться текст
+
+/** @type {string} */
 let searchString = ''; // Переменная для хранения текущей строки поиска
 
 
@@ -2198,6 +2397,12 @@ let searchString = ''; // Переменная для хранения теку�
 //     updateStationList(''); // Показать все станции
 // });
 
+/**
+ * Обновляет список станций на экране поиска по фильтру.
+ * Показывает только те станции, чьи имена начинаются с введённого текста.
+ *
+ * @param {string} filter - Текст, введённый пользователем.
+ */
 function updateStationList(filter) {
     document.getElementById("keyboard").style.display = "none"; // Потом открыть
     document.getElementById("Name_station").style.display = "none"; // Потом открыть
@@ -2222,6 +2427,15 @@ function updateStationList(filter) {
     });
 }
 
+/**
+ * Обрабатывает выбор станции пользователем:
+ * - Скрывает интерфейс;
+ * - Обновляет текст кнопки "Отправление" или "Прибытие";
+ * - Определяет ID выбранной станции по тексту на SVG-карте;
+ * - Устанавливает `from` или `to` через blocks.fromto.
+ *
+ * @param {string} station - Переведённое название станции (из UI).
+ */
 function handleStationClick(station) {
     document.getElementById("keyboard").style.display = "none"; // Потом открыть
     document.getElementById("Name_station").style.display = "none"; // Потом открыть
@@ -2283,7 +2497,10 @@ function handleStationClick(station) {
 }
 
 
-
+/**
+ * Добавляет обработчики клика на все кнопки с классом "key" (виртуальная клавиатура).
+ * По нажатию обновляет строку поиска, обновляет список станций и тексты на кнопках.
+ */
 document.querySelectorAll('.key').forEach(key => {
     key.addEventListener('click', function() {
         const keyValue = key.textContent.trim();
@@ -2299,6 +2516,12 @@ document.querySelectorAll('.key').forEach(key => {
         autoCompleteStation();
     });
 });
+
+/**
+ * Отображает список станций выбранной линии метро.
+ *
+ * @param {number} lineIndex - Индекс линии метро в массиве `metro`.
+ */
 function showLineStations(lineIndex) {
     console.log(lineIndex)
     // Находим существующий ul, если он есть, и удаляем его
@@ -2333,6 +2556,11 @@ function showLineStations(lineIndex) {
     document.getElementById("Text_img").style.display = "none"; // Потом открыть
 }
 
+/**
+ * Обновляет текст на активной кнопке выбора станции (отправление или прибытие).
+ *
+ * @param {string} text - Текст для отображения.
+ */
 function updateActiveButtonText(text) {
     if (activeButton === 'departure') {
         document.getElementById('departureBtn').textContent = translateText(text);
@@ -2342,6 +2570,10 @@ function updateActiveButtonText(text) {
     }
 }
 
+/**
+ * Таймер неактивности — по истечении 2 минут без действий страница перезагружается.
+ * Сброс таймера происходит по событиям касания и скролла.
+ */
 let inactivityTimeout;
 
 function resetInactivityTimer() {
@@ -2351,10 +2583,12 @@ function resetInactivityTimer() {
     }, 2 * 60 * 1000);
 }
 
+// Список событий, по которым будет сбрасываться таймер неактивности
 ['touchstart', 'touchmove', 'touchend', 'touchcancel', 'scroll'].forEach(evt => {
     document.addEventListener(evt, resetInactivityTimer, true);
 });
 
+// Запускаем таймер при загрузке страницы
 resetInactivityTimer();
 
 </script>
